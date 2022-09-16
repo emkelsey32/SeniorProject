@@ -14,7 +14,7 @@ const app = express();
 app.use(cors());
 
 app.use("*", async (req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://swe-at.herokuapp.com/")
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200")
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, PUT, DELETE, OPTIONS")
     res.setHeader("Access-Control-Allow-Headers", "Origin, Accept, Content-Type, Authorization")
     res.setHeader("Access-Control-Allow-Credentials", true)

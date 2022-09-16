@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {getUsers} from '../../API';
 
 @Component({
   selector: 'app-landing-page',
@@ -12,4 +13,11 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  async someFunc() {
+    var something = await getUsers();
+    console.log(await getUsers());
+    console.log("Hi")
+  }
+  
 }
+
