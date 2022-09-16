@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Tab } from 'bootstrap';
 
 @Component({
   selector: 'app-landing-page',
