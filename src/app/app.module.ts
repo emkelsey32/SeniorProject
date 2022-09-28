@@ -10,6 +10,7 @@ import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { ModulePageComponent } from './module-page/module-page.component';
+import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ModulePageComponent } from './module-page/module-page.component';
     SignInPageComponent,
     HomePageComponent,
     ProfilePageComponent,
-    ModulePageComponent
+    ModulePageComponent,
+    TermsAndConditionsComponent
   ],
   imports: [
     BrowserModule,
