@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
-
+import { createUser } from 'src/API';
+import { Router } from "@angular/router";
 @Component({
   selector: 'app-registration-page',
   templateUrl: './registration-page.component.html',
@@ -8,12 +9,13 @@ import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 })
 export class RegistrationPageComponent implements OnInit {
   registerForm!: FormGroup;
-  constructor(private formBuilder: FormBuilder,) { }
+  submitted = false;
+  constructor(private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
-      firstname: ['', Validators.required],
-      lastname: ['', Validators.required],
+      firstName: ['', Validators.required],
+      lastName: ['', Validators.required],
       email: ['', Validators.required],
       username: ['', Validators.required],
       password: ['', Validators.required]
@@ -21,8 +23,14 @@ export class RegistrationPageComponent implements OnInit {
 
   }
   get f() { return this.registerForm.controls; }
-  registerAccount(): void {
-    console.log(this.f['username'].value)
+  async registerAccount(): Promise<void> {
+    this.submitted = true;
+    let token;
+    if (this.registerForm.invalid) {
+      return;
+  }
+    let a = await createUser(this.f['firstName'].value, this.f['lastName'].value, this.f['username'].value, this.f['password'].value, this.f['email'].value)
+    localStorage.setItem("token", JSON.stringify(a));
     console.log("calling properly")
     //console.log(e)
 

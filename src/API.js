@@ -29,15 +29,13 @@ async function request(url, body) {
 
 // --- User Creation and Authentication --- // -------------------------------------------------------------------------
 
-export async function createUser(firstname, lastname, username, password, email, major, year) {
+export async function createUser(firstname, lastname, username, password, email) {
     return await request('users/create', {
         firstname: firstname,   // type: String
         lastname: lastname,     // type: String
         username: username,     // type: String
         password: password,     // type: String
         email: email,           // type: String
-        major: major,           // type: String
-        year: year,             // type: String
     });
 }
 
