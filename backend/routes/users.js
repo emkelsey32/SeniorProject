@@ -1,10 +1,10 @@
 import express from "express";
-import Users from '../models/users.js';
+import User from '../models/users.js';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import 'dotenv/config.js';
 import verifyToken from "./auth.js";
-
+import mongoose from 'mongoose';
 const user = express.Router();
 
 // --- Return List of Current Users ---
@@ -12,10 +12,19 @@ const user = express.Router();
 
 user.get('/', async (req, res) => {
     try {
-        console.log(Users.find())
-        const users = await Users.find();
-        console.log(users);
-        res.json(users);
+        const customerSchema = User;
+        const Customer = mongoose.model('User', customerSchema);
+
+         await Customer.create({ firstname: 'D', lastname: 'd@foo.bar' });
+        // await Customer.create({ name: 'B', age: 28, email: 'b@foo.bar' });
+
+        // Find all customers
+        const docs = await Customer.find();
+        console.log(docs)
+        // console.log(db.collection(users).find())
+        // const users = await Users.find();
+        // console.log(users);
+        res.json(docs);
     }
     catch (err) {
         res.json({ message: err });
