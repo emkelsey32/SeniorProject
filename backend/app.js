@@ -14,7 +14,7 @@ const app = express();
 app.use(cors());
 
 app.use("*", async (req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://swe-at.herokuapp.com/")
+    res.setHeader("Access-Control-Allow-Origin", "http://localhost:4200")
     res.setHeader("Access-Control-Allow-Methods", "GET, POST, PATCH, PUT, DELETE, OPTIONS")
     res.setHeader("Access-Control-Allow-Headers", "Origin, Accept, Content-Type, Authorization")
     res.setHeader("Access-Control-Allow-Credentials", true)
@@ -41,7 +41,6 @@ app.get('/*', function (req, res) {
 //});
 
 // --- Connect to MongoDB ---
-
 mongoose.connect(`mongodb+srv://ekelsey:12345@cluster0.nkrnevo.mongodb.net/?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
     console.log('Database connection status: ', (mongoose.connection.readyState ? "Connected!" : "Something went wrong..."));
 });
