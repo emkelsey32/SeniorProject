@@ -11,7 +11,8 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { ModulePageComponent } from './module-page/module-page.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
-
+import { FormsModule }   from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,9 @@ import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-co
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
