@@ -34,8 +34,10 @@ user.get('/', async (req, res) => {
 // --- Create New User ---
 
 user.post('/create', async (req, res) => {
-    const existingUser = await User.findOne({username: req.body.username});
-    const existingEmail = await User.findOne({email: req.body.email});
+    const customerSchema = User;
+    const Customer = mongoose.model('User', customerSchema);
+    const existingUser = await Customer.findOne({username: req.body.username});
+    const existingEmail = await Customer.findOne({email: req.body.email});
     if(existingUser !== null)
     {
         res.json({ message: "Username already exists."});
@@ -59,19 +61,18 @@ user.post('/create', async (req, res) => {
         res.json({message: 'Password hashing failed.'});
         return;
     }
-
-    const user = new User({
-        firstname: req.body.firstname,
-        lastname: req.body.lastname,
+    const user = new Customer({
+        firstName: req.body.firstname,
+        lastName: req.body.lastname,
         username: req.body.username,
         email: req.body.email,
         password: hash,
-        year: req.body.year,
-        major: req.body.major,
     });
     try {
         const saveUser = await user.save();
+        console.log(saveUser)
         res.json(saveUser);
+        
     }
     catch (err) {
         res.json({ message: err });
