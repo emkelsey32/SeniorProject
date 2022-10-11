@@ -14,6 +14,7 @@ import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-co
 import { FormsModule }   from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MainNavbarComponent } from './main-navbar/main-navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +25,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomePageComponent,
     ProfilePageComponent,
     ModulePageComponent,
-    TermsAndConditionsComponent
+    TermsAndConditionsComponent,
+    MainNavbarComponent
   ],
   imports: [
     BrowserModule,
