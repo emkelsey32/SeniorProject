@@ -27,6 +27,7 @@ export class SignInPageComponent implements OnInit {
     if (this.signInForm.invalid) {
       return;
   }
+    console.log(this.f['username'].value)
     let a = await loginUser(this.f['username'].value, this.f['password'].value)
     localStorage.setItem("token", JSON.stringify(a));
     console.log("calling properly")

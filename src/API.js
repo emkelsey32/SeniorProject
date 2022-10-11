@@ -40,21 +40,18 @@ export async function createUser(firstname, lastname, username, password, email)
 }
 
 export async function loginUser(username, password) {
+
     let res = await request('users/login', {
         username: username,
         password: password
     });
+    console.log(res)
     if(res.token === undefined) {
         return false;
     }
-    localStorage.setItem("token", res.token);
-    let user = await getUser(res.token);
-    localStorage.setItem(
-        "name",
-        user.user.firstname
-    );
-    localStorage.setItem("isAdmin", user.user.admin);
-    return res.token;
+    console.log(res.token)
+    return res.token    
+    
 }
 
 // --- Get Member Data ---------------------------------- // -------------------------------------------------------------------------
