@@ -5,10 +5,22 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './profile-page.component.html',
   styleUrls: ['./profile-page.component.scss']
 })
-export class ProfilePageComponent implements OnInit {
 
+export class ProfilePageComponent implements OnInit {
+  firstName = "";
+  lastName = "";
+  userName = "";
+  email = "";
   constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.firstName = "firstName"
+    const user = JSON.parse(localStorage.getItem("a")!)
+    this.firstName = (user!.firstName)
+    this.lastName = (user!.lastName)
+    this.userName = (user!.username) 
+    this.email = (user!.email) 
+ 
+   }
 
 }
