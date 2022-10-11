@@ -52,7 +52,12 @@ user.post('/create', async (req, res) => {
 
     let salt;
     let hash;
-
+    let test = [{
+        module1: {
+            progress: [1, 0, 0]
+        }
+        
+    }]
     try {
         salt = await bcrypt.genSalt(12);
         hash = await bcrypt.hash(req.body.password, salt);
@@ -67,6 +72,7 @@ user.post('/create', async (req, res) => {
         username: req.body.username,
         email: req.body.email,
         password: hash,
+        progress: test
     });
     try {
         const saveUser = await user.save();
@@ -120,15 +126,17 @@ user.patch('/:userId', async (req, res) => {
 
 user.post('/login', async (req, res) => {
     try {
-        const loginUser = await User.findOne({username: req.body.username});
+        const customerSchema = User;
+        const Customer = mongoose.model('User', customerSchema);
+        const loginUser = await Customer.findOne({username: req.body.username});
         if(loginUser !== null) {
             const passValid = await bcrypt.compare(req.body.password, loginUser.password);
             if(!passValid) {
                 res.json({message: 'Invalid username or password!'});
                 return;
             }
-            const token = jwt.sign({_id: loginUser._id}, process.env.NOT_A_SECRET);
-            res.json({token: token});
+            //const token = jwt.sign({_id: loginUser._id}, process.env.NOT_A_SECRET);
+            res.json({token: loginUser});
             return;
         }
         res.json({message: 'Invalid username or password!'});
