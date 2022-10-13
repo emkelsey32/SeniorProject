@@ -33,7 +33,7 @@ export class HomePageComponent implements OnInit {
       
     }
     const user = JSON.parse(localStorage.getItem("token")!)
-    let newUser = await progressCourse({username: "ekelsey"}, update)
+    let newUser = await progressCourse(user.username, update)
     localStorage.setItem("token", JSON.stringify(newUser))
   }
 

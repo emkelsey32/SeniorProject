@@ -1,7 +1,7 @@
 import { style } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { Tab } from 'bootstrap';
 import {getUsers} from '../../API';
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-landing-page',
@@ -10,7 +10,7 @@ import {getUsers} from '../../API';
 })
 export class LandingPageComponent implements OnInit {
   mod1Progress = "";
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     let user = JSON.parse(localStorage.getItem("token")!)
@@ -32,7 +32,10 @@ export class LandingPageComponent implements OnInit {
     console.log("Hi")
 
   }
-  
+  startModule(): void{
+    this.router.navigate(['/moduleOneOne'])
+
+  }
   mod1ProgressStyle = style({
       width: this.mod1Progress
   })

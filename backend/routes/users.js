@@ -166,7 +166,6 @@ user.post('/getUser', async (req, res) => {
 });
 
 user.post('/progressCourse', async (req, res) => {
-    console.log(req.body)
     try{
         // let token = verifyToken(req.body.username);
         // if(token === false)

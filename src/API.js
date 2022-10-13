@@ -74,7 +74,6 @@ export async function getEvents() {
 }
 
 export async function progressCourse(user, progress){
-    console.log("here")
     let res = await request('users/progressCourse',{
         username: user,
         updatedValue: progress
