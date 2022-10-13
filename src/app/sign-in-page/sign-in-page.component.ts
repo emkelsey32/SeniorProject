@@ -29,7 +29,7 @@ export class SignInPageComponent implements OnInit {
   }
     console.log(this.f['username'].value)
     let a = await loginUser(this.f['username'].value, this.f['password'].value)
-    localStorage.setItem("token", a);
+    localStorage.setItem("token", JSON.stringify(a));
     console.log("calling properly")
     this.router.navigate(['/'])
     //console.log(e)

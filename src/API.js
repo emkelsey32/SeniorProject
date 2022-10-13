@@ -73,6 +73,17 @@ export async function getEvents() {
     return await res.json();
 }
 
+export async function progressCourse(user, progress){
+    console.log("here")
+    let res = await request('users/progressCourse',{
+        username: user,
+        updatedValue: progress
+    });
+
+    console.log(res.user)
+    return res.user
+}
+
 // --- Event Creation and Attendance--------------------- // -------------------------------------------------------------------------
 
 export async function createEvent(title, description, date, startTime, endTime, password) {

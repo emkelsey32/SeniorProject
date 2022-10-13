@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { progressCourse } from 'src/API';
 
 @Component({
   selector: 'app-home-page',
@@ -10,6 +11,30 @@ export class HomePageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  async updatePage(module: number, page:number): Promise<void> {
+    //call findOneAndUpdate
+    let update = null;
+    if(module == 1){
+      update = {progress: [
+        {module1:{
+          progress: [1,1,0]}}
+      ]}
+    }else if(module == 2){
+
+    }else if(module == 3){
+      
+    }else if(module == 4){
+      
+    }else if(module == 5){
+      
+    }else if(module == 6){
+      
+    }
+    const user = JSON.parse(localStorage.getItem("token")!)
+    let newUser = await progressCourse({username: "ekelsey"}, update)
+    localStorage.setItem("token", JSON.stringify(newUser))
   }
 
 }
