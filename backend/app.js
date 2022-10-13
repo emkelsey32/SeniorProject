@@ -41,7 +41,7 @@ app.get('/*', function (req, res) {
 //});
 
 // --- Connect to MongoDB ---
-mongoose.connect(`mongodb+srv://ekelsey:12345@cluster0.nkrnevo.mongodb.net/?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
+mongoose.connect(`mongodb+srv://ekelsey:12345@cluster0.nkrnevo.mongodb.net/?retryWrites=true&w=majority`, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false }, () => {
     console.log('Database connection status: ', (mongoose.connection.readyState ? "Connected!" : "Something went wrong..."));
 });
 

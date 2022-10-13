@@ -15,6 +15,8 @@ import { FormsModule }   from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainNavbarComponent } from './main-navbar/main-navbar.component';
+import { NextPageButtonComponent } from './next-page-button/next-page-button.component';
+import { ModuleOnePageOneComponent } from './module-one-page-one/module-one-page-one.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,9 @@ import { MainNavbarComponent } from './main-navbar/main-navbar.component';
     ProfilePageComponent,
     ModulePageComponent,
     TermsAndConditionsComponent,
-    MainNavbarComponent
+    MainNavbarComponent,
+    NextPageButtonComponent,
+    ModuleOnePageOneComponent
   ],
   imports: [
     BrowserModule,

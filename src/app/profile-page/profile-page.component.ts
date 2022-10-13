@@ -15,7 +15,7 @@ export class ProfilePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.firstName = "firstName"
-    const user = JSON.parse(localStorage.getItem("a")!)
+    const user = JSON.parse(localStorage.getItem("token")!)
     this.firstName = (user!.firstName)
     this.lastName = (user!.lastName)
     this.userName = (user!.username) 
