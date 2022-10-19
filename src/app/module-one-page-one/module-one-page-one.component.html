@@ -1,23 +1,95 @@
+<div>
+    <app-main-navbar></app-main-navbar>
+</div>
 <div class="vstack gap-5">
-    <div>
-        <app-main-navbar></app-main-navbar>
-    </div>
-    <div class="row row-cols-2 row-cols-md-6">
-        <ul class="nav flex-column" style="paddingTop: 2%; paddingLeft: 2vh; height: 100vh; color: white;background-color: #1976d2;">
-            <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Active</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
+        <div class="row">
+          <div class="col-sm-2">
+   
+        <ul class="nav flex-column" style="paddingTop: 8vh; paddingLeft: 5vh; height: 100vh; color: white;background-color: #1976d2;">
+            
+            <div *ngIf="firstPage == 1; else elseBlock">
+                <li class="nav-item">
+                    <a class="nav-link backgroundColorLink" href="moduleOneOne" >All about tags!</a>
+                </li>
+            </div>
+            <ng-template #elseBlock>
+                <li class="nav-item">
+                    <a class="nav-link backgroundColorLink disabled" href="" >All about tags!</a>
+                </li>
+            </ng-template>
+            <div *ngIf="secondPage == 1; else elseBlock2">
+                <li class="nav-item">
+                    <a class="nav-link backgroundColorLink" href="moduleOneTwo" >What's all this spacing?</a>
+                </li>
+            </div>
+            <ng-template #elseBlock2>
+                <li class="nav-item">
+                    <a class="nav-link backgroundColorLink disabled" href="" >What's all this spacing?</a>
+                </li>
+            </ng-template>
+            <div *ngIf="thirdPage == 1; else elseBlock3">
+                <li class="nav-item">
+                    <a class="nav-link backgroundColorLink" href="moduleOneThree" >On the topic of headers</a>
+                </li>
+            </div>
+            <ng-template #elseBlock3>
+                <li class="nav-item">
+                    <a class="nav-link backgroundColorLink disabled" href="" >On the topic of headers</a>
+                </li>
+            </ng-template>
+            <div *ngIf="fourthPage == 1; else elseBlock4">
+                <li class="nav-item">
+                    <a class="nav-link backgroundColorLink" href="moduleOneFour" >The 'div' tag</a>
+                </li>
+            </div>
+            <ng-template #elseBlock4>
+                <li class="nav-item">
+                    <a class="nav-link backgroundColorLink disabled" href="" >The 'div' tag</a>
+                </li>
+            </ng-template>
+            <div *ngIf="fifthPage == 1; else elseBlock5">
+                <li class="nav-item">
+                    <a class="nav-link backgroundColorLink" href="moduleOneFive" >Extra HTML functions</a>
+                </li>
+            </div>
+            <ng-template #elseBlock5>
+                <li class="nav-item">
+                    <a class="nav-link backgroundColorLink disabled" href="" >Extra HTML functions</a>
+                </li>
+            </ng-template>
+            <div *ngIf="sixthPage == 1; else elseBlock6">
+                <li class="nav-item">
+                    <a class="nav-link backgroundColorLink" href="moduleOneSix" >Conceptual Check</a>
+                </li>
+            </div>
+            <ng-template #elseBlock6>
+                <li class="nav-item">
+                    <a class="nav-link backgroundColorLink disabled" href="" >Conceptual Check</a>
+                </li>
+            </ng-template>
+            <div *ngIf="seventhPage == 1; else elseBlock7">
+                <li class="nav-item">
+                    <a class="nav-link backgroundColorLink" href="moduleOneSeven" >Practical Assignment</a>
+                </li>
+            </div>
+            <ng-template #elseBlock7>
+                <li class="nav-item">
+                    <a class="nav-link backgroundColorLink disabled" href="" >Practical Assignment</a>
+                </li>
+            </ng-template>
         </ul>
-        <!-- THIS IS WHERE COURSE CONTENT WILL GO -->
-        <!-- <div style="paddingTop: 2%;">
-            poop
-
-        </div> -->
     </div>
-</div>  
+        
+        <!-- THIS IS WHERE COURSE CONTENT WILL GO -->
+        <div class="col-sm-10">
+        <div style="paddingTop: 8vh; paddingLeft: 5%;"> 
+            <h2 style="font-size: 3vh;  margin-bottom: 2%; ">
+                Content header
+            </h2>
+            <a style="font-size: 2vh; paddingLeft: 3%; ">
+                Sample content text extending the length of the text
+            </a>
+            <button (click)="updatePage(1,1, '/moduleOneTwo')"  style="marginLeft: 2%; ">Move to Next Lesson!</button>
+        </div>
+    </div>
+    </div>
