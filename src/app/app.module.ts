@@ -18,6 +18,7 @@ import { MainNavbarComponent } from './main-navbar/main-navbar.component';
 import { NextPageButtonComponent } from './next-page-button/next-page-button.component';
 import { ModuleOnePageOneComponent } from './module-one-page-one/module-one-page-one.component';
 import { ModuleOnePageTwoComponent } from './module-one-page-two/module-one-page-two.component';
+import { ModuleOnePracticalComponent } from './module-one-practical/module-one-practical.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { ModuleOnePageTwoComponent } from './module-one-page-two/module-one-page
     MainNavbarComponent,
     NextPageButtonComponent,
     ModuleOnePageOneComponent,
-    ModuleOnePageTwoComponent
+    ModuleOnePageTwoComponent,
+    ModuleOnePracticalComponent
   ],
   imports: [
     BrowserModule,
