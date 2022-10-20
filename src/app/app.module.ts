@@ -3,23 +3,23 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeNavbarComponent } from './home-navbar/home-navbar.component';
 import { FormsModule }   from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { MainNavbarComponent } from './main-navbar/main-navbar.component';
+import { MainNavbarModule } from './main-navbar/main-navbar.module';
+import { HomeNavbarModule } from './home-navbar/home-navbar.module';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeNavbarComponent,
-    MainNavbarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
+    MainNavbarModule,
+    HomeNavbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

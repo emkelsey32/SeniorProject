@@ -3,13 +3,18 @@ import { CommonModule } from '@angular/common';
 
 import { RegistrationPageRoutingModule } from './registration-page-routing.module';
 import { RegistrationPageComponent } from './registration-page.component';
-
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [RegistrationPageComponent],
+  declarations: [
+    RegistrationPageComponent,
+  ],
   imports: [
     CommonModule,
-    RegistrationPageRoutingModule
+    RegistrationPageRoutingModule,
+    NgbModule,
+    ReactiveFormsModule
   ]
 })
 export class RegistrationPageModule { }
