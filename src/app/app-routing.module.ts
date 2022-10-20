@@ -32,7 +32,7 @@ const routes: Routes = [
     loadChildren: () => import('./about-internal-page/about-internal-page.module').then(m => m.AboutInternalPageModule)  
   },
   {
-    path: 'moduleOne', 
+    path: 'module-1', 
     loadChildren: () => import('./module1/module1.module').then(m => m.Module1Module)
   }
 ];
