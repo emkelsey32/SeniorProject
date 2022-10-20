@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeNavbarComponent } from './home-navbar/home-navbar.component';
-import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 import { FormsModule }   from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -15,7 +14,6 @@ import { AboutInternalPageComponent } from './about-internal-page/about-internal
   declarations: [
     AppComponent,
     HomeNavbarComponent,
-    ProfilePageComponent,
     TermsAndConditionsComponent,
     MainNavbarComponent,
     AboutInternalPageComponent,
