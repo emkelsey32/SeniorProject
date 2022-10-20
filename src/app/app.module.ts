@@ -9,17 +9,12 @@ import { RegistrationPageComponent } from './registration-page/registration-page
 import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
-import { ModulePageComponent } from './module-page/module-page.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
 import { FormsModule }   from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainNavbarComponent } from './main-navbar/main-navbar.component';
 import { AboutInternalPageComponent } from './about-internal-page/about-internal-page.component';
-import { NextPageButtonComponent } from './next-page-button/next-page-button.component';
-import { ModuleOnePageOneComponent } from './module1/module-one-page-one/module-one-page-one.component';
-import { ModuleOnePageTwoComponent } from './module1/module-one-page-two/module-one-page-two.component';
-import { ModuleOnePracticalComponent } from './module1/module-one-practical/module-one-practical.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,14 +24,9 @@ import { ModuleOnePracticalComponent } from './module1/module-one-practical/modu
     SignInPageComponent,
     HomePageComponent,
     ProfilePageComponent,
-    ModulePageComponent,
     TermsAndConditionsComponent,
     MainNavbarComponent,
     AboutInternalPageComponent,
-    NextPageButtonComponent,
-    ModuleOnePageOneComponent,
-    ModuleOnePageTwoComponent,
-    ModuleOnePracticalComponent
   ],
   imports: [
     BrowserModule,
