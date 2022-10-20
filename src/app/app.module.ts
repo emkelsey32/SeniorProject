@@ -8,13 +8,11 @@ import { FormsModule }   from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainNavbarComponent } from './main-navbar/main-navbar.component';
-import { AboutInternalPageComponent } from './about-internal-page/about-internal-page.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeNavbarComponent,
     MainNavbarComponent,
-    AboutInternalPageComponent,
   ],
   imports: [
     BrowserModule,
