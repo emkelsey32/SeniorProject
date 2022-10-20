@@ -16,6 +16,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainNavbarComponent } from './main-navbar/main-navbar.component';
 import { AboutInternalPageComponent } from './about-internal-page/about-internal-page.component';
+import { NextPageButtonComponent } from './next-page-button/next-page-button.component';
+import { ModuleOnePageOneComponent } from './module1/module-one-page-one/module-one-page-one.component';
+import { ModuleOnePageTwoComponent } from './module1/module-one-page-two/module-one-page-two.component';
+import { ModuleOnePracticalComponent } from './module1/module-one-practical/module-one-practical.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +32,11 @@ import { AboutInternalPageComponent } from './about-internal-page/about-internal
     ModulePageComponent,
     TermsAndConditionsComponent,
     MainNavbarComponent,
-    AboutInternalPageComponent
+    AboutInternalPageComponent,
+    NextPageButtonComponent,
+    ModuleOnePageOneComponent,
+    ModuleOnePageTwoComponent,
+    ModuleOnePracticalComponent
   ],
   imports: [
     BrowserModule,

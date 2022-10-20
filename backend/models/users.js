@@ -20,6 +20,13 @@ const UserSchema = mongoose.Schema({
     password: {
         type: String,
         required: true,
-    }
+    },
+    progress: [{
+        module1:{
+            progress:{
+                type: Array
+            }
+        }         
+    }]
 });
 export default UserSchema;
