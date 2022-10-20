@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutInternalPageComponent } from './about-internal-page/about-internal-page.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ModulePageComponent } from './module-page/module-page.component';
@@ -15,7 +16,8 @@ const routes: Routes = [
   {path: "sign-in-page", component: SignInPageComponent},
   {path: 'profile-page', component: ProfilePageComponent},
   {path: 'module-page', component: ModulePageComponent},
-  {path: 'terms-and-conditions', component: TermsAndConditionsComponent}
+  {path: 'terms-and-conditions', component: TermsAndConditionsComponent},
+  {path: 'about-page', component:AboutInternalPageComponent}
 ];
 
 @NgModule({
