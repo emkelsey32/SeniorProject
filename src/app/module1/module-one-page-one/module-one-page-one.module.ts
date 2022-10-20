@@ -10,7 +10,7 @@ import { MainNavbarModule } from 'src/app/main-navbar/main-navbar.module';
   imports: [
     CommonModule,
     ModuleOnePageOneRoutingModule,
-    MainNavbarModule
+    MainNavbarModule,
   ]
 })
 export class ModuleOnePageOneModule { }

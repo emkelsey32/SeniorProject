@@ -6,6 +6,8 @@ import { ModuleOnePageOneComponent } from './module-one-page-one/module-one-page
 import { ModuleOnePageTwoComponent } from './module-one-page-two/module-one-page-two.component';
 import { ModuleOnePracticalComponent } from './module-one-practical/module-one-practical.component';
 import { MainNavbarModule } from '../main-navbar/main-navbar.module';
+import { SideNavbarModule } from '../side-navbar/side-navbar.module';
+import { Module1sidenavModule } from '../module1sidenav/module1sidenav.module';
 @NgModule({
   declarations: [
     ModuleOnePageOneComponent,
@@ -15,7 +17,9 @@ import { MainNavbarModule } from '../main-navbar/main-navbar.module';
   imports: [
     CommonModule,
     Module1RoutingModule,
-    MainNavbarModule
+    MainNavbarModule,
+    SideNavbarModule,
+    Module1sidenavModule
   ]
 })
 export class Module1Module { }

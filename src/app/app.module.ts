@@ -8,6 +8,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainNavbarModule } from './main-navbar/main-navbar.module';
 import { HomeNavbarModule } from './home-navbar/home-navbar.module';
+import { SideNavbarModule } from './side-navbar/side-navbar.module';
+import { Module1sidenavModule } from './module1sidenav/module1sidenav.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +21,10 @@ import { HomeNavbarModule } from './home-navbar/home-navbar.module';
     ReactiveFormsModule,
     NgbModule,
     MainNavbarModule,
-    HomeNavbarModule
+    HomeNavbarModule,
+    SideNavbarModule,
+    Module1sidenavModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
