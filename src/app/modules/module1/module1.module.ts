@@ -7,12 +7,14 @@ import { ModuleOnePageTwoComponent } from './module-one-page-two/module-one-page
 import { ModuleOnePracticalComponent } from './module-one-practical/module-one-practical.component';
 import { Module1sidenavModule } from '../module1sidenav/module1sidenav.module';
 import { MainNavbarModule } from 'src/app/main-navbar/main-navbar.module';
+import { Module1Component } from './module1.component';
 
 @NgModule({
   declarations: [
     ModuleOnePageOneComponent,
     ModuleOnePageTwoComponent,
     ModuleOnePracticalComponent,
+    Module1Component,
   ],
   imports: [
     CommonModule,

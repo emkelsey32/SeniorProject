@@ -1,5 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { ModuleOnePageOneComponent } from './modules/module1/module-one-page-one/module-one-page-one.component';
+import { ModuleOnePageTwoComponent } from './modules/module1/module-one-page-two/module-one-page-two.component';
+import { ModuleOnePracticalComponent } from './modules/module1/module-one-practical/module-one-practical.component';
 
 
 const routes: Routes = [
@@ -30,10 +33,9 @@ const routes: Routes = [
   {
     path: 'about-page', 
     loadChildren: () => import('./about-internal-page/about-internal-page.module').then(m => m.AboutInternalPageModule)  
-  },
-  {
-    path: 'module-1', 
-    loadChildren: () => import('./module1/module1.module').then(m => m.Module1Module)
+  },{
+    path: 'm1', 
+    loadChildren: () => import('./modules/module1/module1.module').then(m => m.Module1Module)
   }
 ];
 
