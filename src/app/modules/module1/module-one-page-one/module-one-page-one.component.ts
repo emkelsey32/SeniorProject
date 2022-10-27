@@ -7,6 +7,7 @@ import { Router } from "@angular/router";
   styleUrls: ['./module-one-page-one.component.scss']
 })
 export class ModuleOnePageOneComponent implements OnInit {
+
   firstPage = 0;
   secondPage = 0;
   thirdPage = 0;
@@ -14,6 +15,7 @@ export class ModuleOnePageOneComponent implements OnInit {
   fifthPage = 0;
   sixthPage = 0;
   seventhPage = 0;
+
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -26,32 +28,32 @@ export class ModuleOnePageOneComponent implements OnInit {
     this.fifthPage = mod1Progress[4]
     this.sixthPage = mod1Progress[5]
     this.seventhPage = mod1Progress[6]
-    
   }
 
   async updatePage(module: number, page:number, reroutePage: string): Promise<void> {
     //call findOneAndUpdate
     let update = null;
-    if(module == 1){
+      let user = JSON.parse(localStorage.getItem("token")!);
+      let mod1Progress = user.progress[0].module1.progress;
+      let sum1 = 0
+      for(let i = 0; i < mod1Progress.length; i++){
+          sum1 += mod1Progress[i];
+      }
+      
+      if(sum1 > 2){
+        update = mod1Progress;
+      }else{
       update = {progress: [
         {module1:{
-          progress: [1,1,0]}}
+          progress: [1,1,0,0,0,0,0]}},
+          {module2:{
+            progress: [0,0,0]}}
       ]}
-    }else if(module == 2){
-
-    }else if(module == 3){
-      
-    }else if(module == 4){
-      
-    }else if(module == 5){
-      
-    }else if(module == 6){
-      
-    }
-    const user = JSON.parse(localStorage.getItem("token")!)
-    console.log(user.username)
-    let newUser = await progressCourse(user.username, update)
+      let newUser = await progressCourse(user.username, update)
     localStorage.setItem("token", JSON.stringify(newUser))
+    }
     this.router.navigate([reroutePage])
+
+    
   }
 }
