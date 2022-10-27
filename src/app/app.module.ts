@@ -11,10 +11,12 @@ import { HomeNavbarModule } from './home-navbar/home-navbar.module';
 import { SideNavbarModule } from './side-navbar/side-navbar.module';
 import { Module1sidenavModule } from './modules/module1sidenav/module1sidenav.module';
 import { EditUserInfoComponent } from './modal/edit-user-info/edit-user-info.component';
+import { ResetPasswordComponent } from './modal/reset-password/reset-password.component';
 @NgModule({
   declarations: [
     AppComponent,
     EditUserInfoComponent,
+    ResetPasswordComponent,
   ],
   imports: [
     BrowserModule,
