@@ -4,6 +4,10 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { ModuleOnePageOneComponent } from './module1/module-one-page-one/module-one-page-one.component';
 import { ModuleOnePageTwoComponent } from './module1/module-one-page-two/module-one-page-two.component';
+import { ModuleOnePageThreeComponent } from './module1/module-one-page-three/module-one-page-three.component';
+import { ModuleOnePageFourComponent } from './module1/module-one-page-four/module-one-page-four.component';
+import { ModuleOnePageFiveComponent } from './module1/module-one-page-five/module-one-page-five.component';
+import { ModuleOnePageConceptualComponent } from './module1/module-one-page-conceptual/module-one-page-conceptual.component';
 import { ModuleOnePracticalComponent } from './module1/module-one-practical/module-one-practical.component';
 import { ModulePageComponent } from './module-page/module-page.component';
 import { ProfilePageComponent } from './profile-page/profile-page.component';
@@ -21,6 +25,10 @@ const routes: Routes = [
   {path: 'terms-and-conditions', component: TermsAndConditionsComponent},
   {path: 'moduleOneOne', component: ModuleOnePageOneComponent},
   {path: 'moduleOneTwo', component: ModuleOnePageTwoComponent},
+  {path: 'moduleOneThree', component: ModuleOnePageThreeComponent},
+  {path: 'moduleOneFour', component: ModuleOnePageFourComponent},
+  {path: 'moduleOneFive', component: ModuleOnePageFiveComponent},
+  {path: 'moduleOneConceptual', component: ModuleOnePageConceptualComponent},
   {path: "moduleOnePractical", component: ModuleOnePracticalComponent}
 ];
 
