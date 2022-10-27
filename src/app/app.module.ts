@@ -9,10 +9,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainNavbarModule } from './main-navbar/main-navbar.module';
 import { HomeNavbarModule } from './home-navbar/home-navbar.module';
 import { SideNavbarModule } from './side-navbar/side-navbar.module';
-import { Module1sidenavModule } from './module1sidenav/module1sidenav.module';
+import { Module1sidenavModule } from './modules/module1sidenav/module1sidenav.module';
+import { EditUserInfoComponent } from './modal/edit-user-info/edit-user-info.component';
 @NgModule({
   declarations: [
     AppComponent,
+    EditUserInfoComponent,
   ],
   imports: [
     BrowserModule,
