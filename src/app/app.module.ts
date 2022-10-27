@@ -19,6 +19,7 @@ import { NextPageButtonComponent } from './next-page-button/next-page-button.com
 import { ModuleOnePageOneComponent } from './module1/module-one-page-one/module-one-page-one.component';
 import { ModuleOnePageTwoComponent } from './module1/module-one-page-two/module-one-page-two.component';
 import { ModuleOnePracticalComponent } from './module1/module-one-practical/module-one-practical.component';
+import { ModuleOneConceptualComponent } from './module1/module-one-conceptual/module-one-conceptual.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,7 +35,8 @@ import { ModuleOnePracticalComponent } from './module1/module-one-practical/modu
     NextPageButtonComponent,
     ModuleOnePageOneComponent,
     ModuleOnePageTwoComponent,
-    ModuleOnePracticalComponent
+    ModuleOnePracticalComponent,
+    ModuleOneConceptualComponent
   ],
   imports: [
     BrowserModule,

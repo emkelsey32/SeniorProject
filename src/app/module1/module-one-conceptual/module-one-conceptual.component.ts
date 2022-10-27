@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { progressCourse } from 'src/API';
 import { Router } from "@angular/router";
 @Component({
-  selector: 'app-module-one-practical',
-  templateUrl: './module-one-practical.component.html',
-  styleUrls: ['./module-one-practical.component.scss']
+  selector: 'app-module-one-conceptual',
+  templateUrl: './module-one-conceptual.component.html',
+  styleUrls: ['./module-one-conceptual.component.scss']
 })
-export class ModuleOnePracticalComponent implements OnInit {
+export class ModuleOneConceptualComponent implements OnInit {
   firstPage = 0;
   secondPage = 0;
   thirdPage = 0;
@@ -28,7 +28,6 @@ export class ModuleOnePracticalComponent implements OnInit {
     this.seventhPage = mod1Progress[6]
     
   }
-
   async updatePage(module: number, page:number, reroutePage: string): Promise<void> {
     //call findOneAndUpdate
     let update = null;
@@ -46,7 +45,7 @@ export class ModuleOnePracticalComponent implements OnInit {
         {module1:{
           progress: [1,1,1,1,1,1,1]}},
           {module2:{
-            progress: [1,0,0]}}
+            progress: [0,0,0]}}
       ]}
       let newUser = await progressCourse(user.username, update)
     localStorage.setItem("token", JSON.stringify(newUser))
@@ -55,3 +54,4 @@ export class ModuleOnePracticalComponent implements OnInit {
 
   }
 }
+

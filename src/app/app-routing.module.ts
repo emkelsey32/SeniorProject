@@ -10,6 +10,7 @@ import { ProfilePageComponent } from './profile-page/profile-page.component';
 import { RegistrationPageComponent } from './registration-page/registration-page.component';
 import { SignInPageComponent } from './sign-in-page/sign-in-page.component';
 import { TermsAndConditionsComponent } from './terms-and-conditions/terms-and-conditions.component';
+import { ModuleOneConceptualComponent } from './module1/module-one-conceptual/module-one-conceptual.component';
 
 const routes: Routes = [
   {path: '', component: HomePageComponent},
@@ -21,7 +22,8 @@ const routes: Routes = [
   {path: 'terms-and-conditions', component: TermsAndConditionsComponent},
   {path: 'moduleOneOne', component: ModuleOnePageOneComponent},
   {path: 'moduleOneTwo', component: ModuleOnePageTwoComponent},
-  {path: "moduleOnePractical", component: ModuleOnePracticalComponent}
+  {path: "moduleOnePractical", component: ModuleOnePracticalComponent},
+  {path: "moduleOneConceptual", component: ModuleOneConceptualComponent}
 ];
 
 @NgModule({
