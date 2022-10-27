@@ -33,7 +33,7 @@ export class LandingPageComponent implements OnInit {
 
   }
   startModule(): void{
-    this.router.navigate(['/moduleOneOne'])
+    this.router.navigate(['/m1/module-1.1'])
 
   }
   mod1ProgressStyle = style({

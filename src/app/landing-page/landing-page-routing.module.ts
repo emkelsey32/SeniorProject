@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ModuleOnePageOneComponent } from '../modules/module1/module-one-page-one/module-one-page-one.component';
 
 import { LandingPageComponent } from './landing-page.component';
 
@@ -8,6 +9,7 @@ const routes: Routes = [
     path: '',
     component: LandingPageComponent
   }
+
 ];
 
 @NgModule({
