@@ -28,10 +28,12 @@ export class RegistrationPageComponent implements OnInit {
     let token;
     if (this.registerForm.invalid) {
       return;
-  }
+    }
     let a = await createUser(this.f['firstName'].value, this.f['lastName'].value, this.f['username'].value, this.f['password'].value, this.f['email'].value)
     localStorage.setItem("token", JSON.stringify(a));
     console.log("calling properly")
+    this.router.navigate(["/landing-page"])
+
     //console.log(e)
 
   }

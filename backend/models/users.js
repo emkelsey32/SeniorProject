@@ -26,7 +26,32 @@ const UserSchema = mongoose.Schema({
             progress:{
                 type: Array
             }
-        }         
+        },
+        module2:{
+            progress:{
+                type: Array
+            }
+        }    ,
+        module3:{
+            progress:{
+                type: Array
+            }
+        },
+        module4:{
+            progress:{
+                type: Array
+            }
+        },
+        module5:{
+            progress:{
+                type: Array
+            }
+        },
+        module6:{
+            progress:{
+                type: Array
+            }
+        }                          
     }]
 });
 export default UserSchema;

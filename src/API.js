@@ -24,6 +24,7 @@ async function request(url, body) {
         },
     );
     res = await res.json();
+    console.log(res)
     return res;
 }
 
@@ -74,6 +75,8 @@ export async function getEvents() {
 }
 
 export async function progressCourse(user, progress){
+    console.log(progress)
+    console.log("fjdslkf")
     let res = await request('users/progressCourse',{
         username: user,
         updatedValue: progress

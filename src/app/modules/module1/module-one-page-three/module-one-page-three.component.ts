@@ -7,7 +7,6 @@ import { Router } from "@angular/router";
   styleUrls: ['./module-one-page-three.component.scss']
 })
 export class ModuleOnePageThreeComponent implements OnInit {
-
   firstPage = 0;
   secondPage = 0;
   thirdPage = 0;
@@ -29,7 +28,6 @@ export class ModuleOnePageThreeComponent implements OnInit {
     this.seventhPage = mod1Progress[6]
     
   }
-
   async updatePage(module: number, page:number, reroutePage: string): Promise<void> {
     //call findOneAndUpdate
     let update = null;
@@ -45,7 +43,7 @@ export class ModuleOnePageThreeComponent implements OnInit {
       }else{
       update = {progress: [
         {module1:{
-          progress: [1,1,1,0,0,0,0]}},
+          progress: [1,1,1,1,0,0,0]}},
           {module2:{
             progress: [0,0,0]}}
       ]}
@@ -56,3 +54,4 @@ export class ModuleOnePageThreeComponent implements OnInit {
 
   }
 }
+
