@@ -31,6 +31,7 @@ export class ModuleOnePracticalComponent implements OnInit {
 
   async updatePage(module: number, page:number, reroutePage: string): Promise<void> {
     //call findOneAndUpdate
+    console.log("here")
     let update = null;
       let user = JSON.parse(localStorage.getItem("token")!);
       let mod1Progress = user.progress[0].module1.progress;
@@ -39,15 +40,17 @@ export class ModuleOnePracticalComponent implements OnInit {
           sum1 += mod1Progress[i];
       }
       
-      if(sum1 > 2){
+      console.log(user.progress)
+      if(sum1 < 0){
         update = mod1Progress;
       }else{
       update = {progress: [
         {module1:{
-          progress: [1,1,1,1,1,1,1]}},
-          {module2:{
-            progress: [1,0,0]}}
+          progress: [1,1,1,1,1,1,1]},
+        module2:{
+          progress: [1,0,0,0,0,0,0]}}
       ]}
+      console.log(update)
       let newUser = await progressCourse(user.username, update)
     localStorage.setItem("token", JSON.stringify(newUser))
     }
