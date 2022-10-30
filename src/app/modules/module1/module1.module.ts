@@ -9,6 +9,10 @@ import { Module1sidenavModule } from '../module1sidenav/module1sidenav.module';
 import { MainNavbarModule } from 'src/app/main-navbar/main-navbar.module';
 import { Module1Component } from './module1.component';
 import { ModuleOneConceptualComponent } from './module-one-conceptual/module-one-conceptual.component';
+import { ModuleOnePageConceptualComponent } from './module-one-page-conceptual/module-one-page-conceptual.component';
+import { ModuleOnePageFiveComponent } from './module-one-page-five/module-one-page-five.component';
+import { ModuleOnePageFourComponent } from './module-one-page-four/module-one-page-four.component';
+import { ModuleOnePageThreeComponent } from './module-one-page-three/module-one-page-three.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +20,11 @@ import { ModuleOneConceptualComponent } from './module-one-conceptual/module-one
     ModuleOnePageTwoComponent,
     ModuleOnePracticalComponent,
     Module1Component,
-    ModuleOneConceptualComponent
+    ModuleOneConceptualComponent,
+    ModuleOnePageConceptualComponent,
+    ModuleOnePageFiveComponent,
+    ModuleOnePageFourComponent,
+    ModuleOnePageThreeComponent
   ],
   imports: [
     CommonModule,

@@ -9,13 +9,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MainNavbarModule } from './main-navbar/main-navbar.module';
 import { HomeNavbarModule } from './home-navbar/home-navbar.module';
 import { SideNavbarModule } from './side-navbar/side-navbar.module';
-import { EditUserInfoComponent } from './modal/edit-user-info/edit-user-info.component';
-import { ResetPasswordComponent } from './modal/reset-password/reset-password.component';
+import { ResetPasswordModule } from './modal/reset-password/reset-password.module';
+import { EditUserInfoModule } from './modal/edit-user-info/edit-user-info.module';
+
 @NgModule({
   declarations: [
-    AppComponent,
-    EditUserInfoComponent,
-    ResetPasswordComponent,
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -26,6 +25,8 @@ import { ResetPasswordComponent } from './modal/reset-password/reset-password.co
     MainNavbarModule,
     HomeNavbarModule,
     SideNavbarModule,
+    ResetPasswordModule,
+    EditUserInfoModule
     
   ],
   providers: [],

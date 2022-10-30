@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { createAvatar } from '@dicebear/avatars';
+import * as style from '@dicebear/avatars-avataaars-sprites';
 @Component({
   selector: 'app-profile-page',
   templateUrl: './profile-page.component.html',
@@ -11,15 +12,21 @@ export class ProfilePageComponent implements OnInit {
   lastName = "";
   userName = "";
   email = "";
+  user = JSON.parse(localStorage.getItem("token")!)
+
   constructor() { }
+
+  svg = createAvatar(style, {
+    seed: 'custom-seed',
+    // ... and other options
+  });
 
   ngOnInit(): void {
     this.firstName = "firstName"
-    const user = JSON.parse(localStorage.getItem("token")!)
-    this.firstName = (user!.firstName)
-    this.lastName = (user!.lastName)
-    this.userName = (user!.username) 
-    this.email = (user!.email) 
+    this.firstName = (this.user!.firstName)
+    this.lastName = (this.user!.lastName)
+    this.userName = (this.user!.username) 
+    this.email = (this.user!.email) 
  
    }
 
