@@ -11,25 +11,11 @@ import { HomeNavbarModule } from './home-navbar/home-navbar.module';
 import { SideNavbarModule } from './side-navbar/side-navbar.module';
 import { ResetPasswordModule } from './modal/reset-password/reset-password.module';
 import { ResetPasswordComponent } from './modal/reset-password/reset-password.component';
-import { ModuleTwoConceptualComponent } from './modules/module2/module-two-conceptual/module-two-conceptual.component';
-import { ModuleTwoPracticalComponent } from './modules/module2/module-two-practical/module-two-practical.component';
-import { ModuleTwoPageOneComponent } from './modules/module2/module-two-page-one/module-two-page-one.component';
-import { ModuleTwoPageTwoComponent } from './modules/module2/module-two-page-two/module-two-page-two.component';
-import { ModuleTwoPageThreeComponent } from './modules/module2/module-two-page-three/module-two-page-three.component';
-import { Module2Component } from './modules/module2/module2.component';
-import { Module2sidenavComponent } from './modules/module2sidenav/module2sidenav.component';
 import { EditUserInfoModule } from './modal/edit-user-info/edit-user-info.module';
 @NgModule({
   declarations: [
     AppComponent,
-    ResetPasswordComponent,
-    ModuleTwoConceptualComponent,
-    ModuleTwoPracticalComponent,
-    ModuleTwoPageOneComponent,
-    ModuleTwoPageTwoComponent,
-    ModuleTwoPageThreeComponent,
-    Module2Component,
-    Module2sidenavComponent,
+    ResetPasswordComponent
   ],
   imports: [
     BrowserModule,
