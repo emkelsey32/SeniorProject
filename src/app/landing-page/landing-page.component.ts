@@ -92,8 +92,12 @@ export class LandingPageComponent implements OnInit {
     console.log("Hi")
 
   }
-  startModule(): void{
+  startModule1(): void{
     this.router.navigate(['/m1/module-1.1'])
+
+  }
+  startModule2(): void{
+    this.router.navigate(['/m2/module-2.1'])
 
   }
   mod1ProgressStyle = style({
