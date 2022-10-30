@@ -44,6 +44,9 @@
                 </div>
             </div>
                 <button type="submit" class="btn btn-primary">Login</button>
+                <div class="alert alert-warning" *ngIf="submitted && !validForm">
+                  Username or password is incorrect!<br />
+                </div>
               </form>
             </div>
           </div>

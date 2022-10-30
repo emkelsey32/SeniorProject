@@ -11,6 +11,8 @@ import { loginUser } from 'src/API';
 export class SignInPageComponent implements OnInit {
   signInForm!: FormGroup;
   submitted = false;
+  validForm = true;
+
   constructor(private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
@@ -25,10 +27,16 @@ export class SignInPageComponent implements OnInit {
     this.submitted = true;
     let token;
     if (this.signInForm.invalid) {
+      this.validForm = false;
       return;
   }
     console.log(this.f['username'].value)
     let a = await loginUser(this.f['username'].value, this.f['password'].value)
+    if(JSON.parse(JSON.stringify(a))._id == undefined){
+      this.validForm = false;
+      console.log("inside!")
+      return;
+    }
     localStorage.setItem("token", JSON.stringify(a));
     console.log("calling properly")
     this.router.navigate(['/landing-page'])
