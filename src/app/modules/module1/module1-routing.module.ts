@@ -1,7 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ModuleOneConceptualComponent } from './module-one-conceptual/module-one-conceptual.component';
-import { ModuleOnePageConceptualComponent } from './module-one-page-conceptual/module-one-page-conceptual.component';
 import { ModuleOnePageFiveComponent } from './module-one-page-five/module-one-page-five.component';
 import { ModuleOnePageFourComponent } from './module-one-page-four/module-one-page-four.component';
 
@@ -44,10 +43,6 @@ const routes: Routes = [
     path: 'module-1.conceptual',
     component: ModuleOneConceptualComponent
   },
-  {
-    path: 'module-1.page.conceptual',
-    component: ModuleOnePageConceptualComponent
-  }
 ];
 
 @NgModule({

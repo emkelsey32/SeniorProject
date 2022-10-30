@@ -41,7 +41,7 @@ export class ModuleOnePracticalComponent implements OnInit {
       }
       
       console.log(user.progress)
-      if(sum1 < 0){
+      if(sum1 >7){
         update = mod1Progress;
       }else{
       update = {progress: [

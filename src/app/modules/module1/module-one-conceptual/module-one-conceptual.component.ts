@@ -38,7 +38,7 @@ export class ModuleOneConceptualComponent implements OnInit {
           sum1 += mod1Progress[i];
       }
       
-      if(sum1 > 2){
+      if(sum1 > 6){
         update = mod1Progress;
       }else{
       update = {progress: [
