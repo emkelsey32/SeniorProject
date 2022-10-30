@@ -1,0 +1,54 @@
+<ul class="nav flex-column" style="paddingTop: 8vh; paddingLeft: 5vh; position: fixed; height: 100vh; color: white;background-color: #1976d2;">
+            
+    <!-- <div *ngIf="firstPage == 1; else elseBlock"> -->
+    <div *ngIf="firstPage == 1; else elseBlock">
+        <li class="nav-item">
+            <a class="nav-link backgroundColorLink" href="m2/module-2.1" >Additional HTML Tags</a>
+        </li>
+    </div>
+    <ng-template #elseBlock>
+        <li class="nav-item">
+            <a class="nav-link backgroundColorLink disabled" href="" >Additional HTML Tags</a>
+        </li>
+    </ng-template>
+    <div *ngIf="secondPage == 1; else elseBlock2">
+        <li class="nav-item">
+            <a class="nav-link backgroundColorLink" href="m2/module-2.2" >Buttons Galore!</a>
+        </li>
+    </div>
+    <ng-template #elseBlock2>
+        <li class="nav-item">
+            <a class="nav-link backgroundColorLink disabled" href="" >Buttons Galore!</a>
+        </li>
+    </ng-template>
+    <div *ngIf="thirdPage == 1; else elseBlock3">
+        <li class="nav-item">
+            <a class="nav-link backgroundColorLink" href="m2/module-2.3" >Libraries</a>
+        </li>
+    </div>
+    <ng-template #elseBlock3>
+        <li class="nav-item">
+            <a class="nav-link backgroundColorLink disabled" href="" >Libraries</a>
+        </li>
+    </ng-template>
+    <div *ngIf="sixthPage == 1; else elseBlock6">
+        <li class="nav-item">
+            <a class="nav-link backgroundColorLink" href="m2/module-2.conceptual" >Conceptual Check</a>
+        </li>
+    </div>
+    <ng-template #elseBlock6>
+        <li class="nav-item">
+            <a class="nav-link backgroundColorLink disabled" href="" >Conceptual Check</a>
+        </li>
+    </ng-template>
+    <div *ngIf="seventhPage == 1; else elseBlock7">
+        <li class="nav-item">
+            <a class="nav-link backgroundColorLink" href="m2/module-2.practical" >Practical Assignment</a>
+        </li>
+    </div>
+    <ng-template #elseBlock7>
+        <li class="nav-item">
+            <a class="nav-link backgroundColorLink disabled" href="" >Practical Assignment</a>
+        </li>
+    </ng-template>
+</ul>
