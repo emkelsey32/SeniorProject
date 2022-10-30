@@ -38,7 +38,7 @@ export class ModuleOnePageFourComponent implements OnInit {
           sum1 += mod1Progress[i];
       }
       
-      if(sum1 > 2){
+      if(sum1 > 4){
         update = mod1Progress;
       }else{
       update = {progress: [

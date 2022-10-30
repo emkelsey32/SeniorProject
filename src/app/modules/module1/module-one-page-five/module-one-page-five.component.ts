@@ -38,7 +38,7 @@ export class ModuleOnePageFiveComponent implements OnInit {
           sum1 += mod1Progress[i];
       }
       
-      if(sum1 > 2){
+      if(sum1 > 5){
         update = mod1Progress;
       }else{
       update = {progress: [

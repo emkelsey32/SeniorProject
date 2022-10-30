@@ -1,1 +1,41 @@
-<p>module-one-page-four works!</p>
+<div>
+    <app-main-navbar></app-main-navbar>
+</div>
+<div class="vstack gap-5">
+        <div class="row">
+          <div class="col-sm-2">
+            <app-module1sidenav></app-module1sidenav>
+    </div>
+        
+        <!-- THIS IS WHERE COURSE CONTENT WILL GO -->
+        <div class="col-sm-10">
+        <div style="paddingTop: 8vh; paddingLeft: 5%;"> 
+            <h2 style="font-size: 3vh;  margin-bottom: 2%; ">
+                The &lt;div&gt; Tag
+            </h2>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                The div tag is the bread and butter of writing HTML because it is a multi-purpose, customizable tag that we can use for infinitely many reasons. One of the most important reasons why we would use a div is to group things together, because a div tag can actually hold other tags within it! This would allow us to apply changes to multiple tags at once rather than having to rewrite the same changes a million times.
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                Going further than that however, we can also utilize divs to essentially create custom tags that we use throughout the website, not even just on one page. This is because you can set different class and attribute IDs to different values that have a wide variety of effects on the contents of the div. There are a huge amount of customizations that you can make here, ranging from small things like bolding content to changing the dimensions of the contents found within the div. In short, divs are really simple but hold a huge amount of the functionality that HTML can offer you when creating a web page.
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                But how do you actually make a div tag anyways, and how would you make all of these changes to customize them? Well, making a div is the easy part. All you have to do is write: 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%; font-weight: bold">
+                &lt;div&gt; &lt;/div&gt; 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                and you’re golden! To customize them, its similar to how you would customize any other tag, you add styles. To do this, you need to add some text within the angle brackets for the opening tag for the div. For example, if I wanted to change the top margin of a specific div, I would write the following: 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%; font-weight: bold">
+                &lt;div styles=”margin-top: 5%”&gt; Insert whatever is in the div here &lt;/div&gt;
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                This would change the top margin to be 5% of what it could be!
+            </p>
+            <button (click)="updatePage(1,1, '/m1/module-1.5')"  style="marginLeft: 2%; ">Move to Next Lesson!</button>
+            <div style="paddingBottom: 5%"> </div>
+        </div>
+    </div>
+    </div>
