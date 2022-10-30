@@ -1,1 +1,70 @@
-<p>module-one-page-five works!</p>
+<div>
+    <app-main-navbar></app-main-navbar>
+</div>
+<div class="vstack gap-5">
+        <div class="row">
+          <div class="col-sm-2">
+            <app-module1sidenav></app-module1sidenav>
+    </div>
+        
+        <!-- THIS IS WHERE COURSE CONTENT WILL GO -->
+        <div class="col-sm-10">
+        <div style="paddingTop: 8vh; paddingLeft: 5%;"> 
+            <h2 style="font-size: 3vh;  margin-bottom: 2%; ">
+                Extra HTML Functions
+            </h2>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                Finally, we have the additional HTML functions and tags that we’ll cover here. One really important additional function is adding images to your webpage. This can be done with an image tag, denoted by: &lt;img&gt;. 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                This tag only uses the opening tag, and has two attributes that you definitely want to fill out: the src attribute and the alt attribute. The src attribute defines that image source, or in plain terms, the image file that is going to be used in that tag. The alt attribute defines some text that should be displayed if the image cannot be loaded for one reason or another. For example, if you wanted to upload an image called “castle.jpg” you might want to create an image tag that looks like this: 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%; font-weight: bold">
+                &lt;img src=”castle.jpg” alt=”A really cool castle I found online”&gt;
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                The image would then look like this:
+            </p>
+            <img src="/assets/castle.jpg" alt="A really cool castle I found online" style="paddingLeft: 3%; width: 50vw; height: 50vh">
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                Normally, the picture would just show up, but if the there was an issue you would see this instead: 
+            </p>
+            <img src="" alt="A really cool castle I found online" style="paddingLeft: 3%">
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                There is also another tag that you should learn about: the &lt;a&gt; tag (also known as the anchor tag). This tag is typically used to create links that take you to other web pages or websites. 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                Have you ever seen that blue text that’s underlined and it takes you somewhere else on the internet (hint you have definitely seen this on the second page of this module)? If you have, that was likely done with an &lt;a&gt; tag. 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                To create a working &lt;a&gt; tag, you would want to have some sort of text in between the opening and closing tags, and then you also need to specify the destination that you want to take the user to when they click on the link. To do this, you need to set the ‘href’ attribute like this: 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%; font-weight: bold">
+                &lt;a href = “https://www.google.com”&gt; Do you want to go to Google? &lt;/a&gt;.
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%; font-weight: bold">
+                Example:
+            </p>
+            <a href="https://www.google.com" style="paddingLeft: 3%">
+                Do you want to go to Google?
+            </a>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                Additionally, if you want the link to open a new tab instead of redirecting in the current tab, add an additional attribute after href called ‘target’ and set it to ‘_blank’. For example: 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%; font-weight: bold">
+                &lt;a href = “https://www.google.com” target=”_blank”&gt; Do you want to go to Google? &lt;/a&gt;
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%; font-weight: bold">
+                Example:
+            </p>
+            <a href="https://google.com" target = "_blank" style="paddingLeft: 3%"> 
+                Do you want to go to Google in a new tab?
+            </a>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                The &lt;a&gt; tag is another powerful tool in your arsenal of HTML tags to make a high quality website. 
+            </p>
+            <button (click)="updatePage(1,1, '/m1/module-1.conceptual')"  style="marginLeft: 2%; ">Move to Next Lesson!</button>
+            <div style="paddingBottom: 5%"> </div>
+        </div>
+    </div>
+    </div>

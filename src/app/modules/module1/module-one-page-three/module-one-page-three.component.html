@@ -1,1 +1,50 @@
-<p>module-one-page-three works!</p>
+<div>
+    <app-main-navbar></app-main-navbar>
+</div>
+<div class="vstack gap-5">
+        <div class="row">
+          <div class="col-sm-2">
+            <app-module1sidenav></app-module1sidenav>
+    </div>
+        
+        <!-- THIS IS WHERE COURSE CONTENT WILL GO -->
+        <div class="col-sm-10">
+        <div style="paddingTop: 8vh; paddingLeft: 5%;"> 
+            <h2 style="font-size: 3vh;  margin-bottom: 2%; ">
+                On the Topic of Headers
+            </h2>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                The header tags are used to create headings and sub-headings for the pages you create. There are many different kinds of header tags, that range from header 1 to header 6, where each time you go up a header number the text will get smaller and less prominent. This is because we start with header 1, which should be the main title of your web page. There should only ever be one header 1 present on a given page, no more.
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                To give an example of this, look at the following lines that each use a different header value.
+            </p>
+            <h1 style="paddingLeft: 3%; margin-right: 20%">
+                Header 1
+            </h1>
+            <h2 style="paddingLeft: 3%; margin-right: 20%">
+                Header 2
+            </h2>
+            <h3 style="paddingLeft: 3%; margin-right: 20%">
+                Header 3
+            </h3>
+            <h4 style="paddingLeft: 3%; margin-right: 20%">
+                Header 4
+            </h4>
+            <h5 style="paddingLeft: 3%; margin-right: 20%">
+                Header 5
+            </h5>
+            <h6 style="paddingLeft: 3%; margin-right: 20%">
+                Header 6
+            </h6>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                Each of these header tags has an ID that looks like this: &lt;h1&gt; or &lt;h2&gt;. This pattern continues for each header, where you just would type the letter h followed by the number of the header you are trying to use. 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                But why even bother with all these headers you might be asking? Headers are important because they improve the user’s experience and the readability of your web page, which makes it significantly easier to navigate through the page and to understand its contents.Additionally, properly or improperly using headers can impact the accessibility of your website which could help promote or deter people from stopping by again.
+            </p>
+            <button (click)="updatePage(1,1, '/m1/module-1.4')"  style="marginLeft: 2%; ">Move to Next Lesson!</button>
+            <div style="paddingBottom: 5%"> </div>
+        </div>
+    </div>
+    </div>

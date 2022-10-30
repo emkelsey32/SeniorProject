@@ -9,7 +9,6 @@ import { Module1sidenavModule } from '../module1sidenav/module1sidenav.module';
 import { MainNavbarModule } from 'src/app/main-navbar/main-navbar.module';
 import { Module1Component } from './module1.component';
 import { ModuleOneConceptualComponent } from './module-one-conceptual/module-one-conceptual.component';
-import { ModuleOnePageConceptualComponent } from './module-one-page-conceptual/module-one-page-conceptual.component';
 import { ModuleOnePageFiveComponent } from './module-one-page-five/module-one-page-five.component';
 import { ModuleOnePageFourComponent } from './module-one-page-four/module-one-page-four.component';
 import { ModuleOnePageThreeComponent } from './module-one-page-three/module-one-page-three.component';
@@ -19,11 +18,13 @@ import { ModuleOnePageThreeComponent } from './module-one-page-three/module-one-
     ModuleOnePageOneComponent,
     ModuleOnePageTwoComponent,
     ModuleOnePracticalComponent,
-    Module1Component,
-    ModuleOneConceptualComponent,
-    ModuleOnePageConceptualComponent,
     ModuleOnePageFiveComponent,
     ModuleOnePageFourComponent,
+    Module1Component,
+    ModuleOneConceptualComponent,
+    ModuleOnePageFiveComponent,
+    ModuleOnePageFourComponent,
+    ModuleOnePageThreeComponent,
     ModuleOnePageThreeComponent
   ],
   imports: [

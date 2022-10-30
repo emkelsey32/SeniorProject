@@ -38,6 +38,7 @@ user.post('/create', async (req, res) => {
     const Customer = mongoose.model('User', customerSchema);
     const existingUser = await Customer.findOne({username: req.body.username});
     const existingEmail = await Customer.findOne({email: req.body.email});
+    console.log(req.body.progress)
     if(existingUser !== null)
     {
         res.json({ message: "Username already exists."});
@@ -55,6 +56,9 @@ user.post('/create', async (req, res) => {
     let test = [{
         module1: {
             progress: [1, 0, 0]
+        },
+        module2: {
+            progress: [0,0,0]
         }
         
     }]
@@ -74,6 +78,7 @@ user.post('/create', async (req, res) => {
         password: hash,
         progress: test
     });
+    console.log(user.progress)
     try {
         const saveUser = await user.save();
         console.log(saveUser)
@@ -176,6 +181,8 @@ user.post('/progressCourse', async (req, res) => {
         
         const customerSchema = User;
         const Customer = mongoose.model('User', customerSchema);
+        console.log(req.body.updatedValue)
+
         const user = await Customer.findOneAndUpdate({username: req.body.username}, req.body.updatedValue, {new: true});
         // console.log(user)
         res.json({user});

@@ -3,30 +3,64 @@
     
     <!-- Module Cards -->
     <div class="row row-cols-1 row-cols-md-3">
+      <div *ngIf="mod1Number != 0; else elseBlock6">
+
   <div class="col mb-4">
-    <div class="card h-100" (click)="startModule()">
+    <div class="card h-100" (click)="startModule1()">
       <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Module 1</h5>
           <div class="progress">
             <div class="progress-bar" role="progressbar" [ngStyle]="{'width': mod1Progress}" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">{{mod1Progress}}</div>
           </div>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">Learn basic HTML here!</p>
       </div>
     </div>
   </div>
-  <div class="col mb-4">
-    <div class="card h-100">
-      <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Module 2</h5>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+  </div>
+  <ng-template #elseBlock6>
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Module 1</h5>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">Not unlocked yet!</div>
+          </div>
+          <p class="card-text">Learn basic HTML here!</p>
         </div>
-        <p class="card-text">This is a short card.</p>
+      </div>
+    </div>
+  </ng-template>
+  <div *ngIf="mod2Number != 0; else elseBlock5">
+    <div class="col mb-4">
+      <div class="card h-100" (click)="startModule2()">
+        <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Module 2</h5>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" [ngStyle]="{'width': mod2Progress}" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{mod2Progress}}</div>
+          </div>
+          <p class="card-text">Learn more advanced HTML techniques here!</p>
+        </div>
       </div>
     </div>
   </div>
+  <ng-template #elseBlock5>
+    <div class="col mb-4">
+      <div class="card h-100">
+        <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Module 2</h5>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">Not unlocked yet!</div>
+          </div>
+          <p class="card-text">Learn more advanced HTML techniques here!</p>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <div *ngIf="mod3Number != 0; else elseBlock4">
   <div class="col mb-4">
     <div class="card h-100">
       <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
@@ -39,6 +73,22 @@
       </div>
     </div>
   </div>
+</div>
+<ng-template #elseBlock4>
+  <div class="col mb-4">
+    <div class="card h-100">
+      <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Module 3</h5>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">Not unlocked yet!</div>
+        </div>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<div *ngIf="mod4Number != 0; else elseBlock3">
   <div class="col mb-4">
     <div class="card h-100">
       <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
@@ -47,10 +97,26 @@
         <div class="progress">
           <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
         </div>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
       </div>
     </div>
   </div>
+</div>
+<ng-template #elseBlock3>
+  <div class="col mb-4">
+    <div class="card h-100">
+      <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Module 4</h5>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">Not unlocked yet!</div>
+        </div>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<div *ngIf="mod5Number != 0; else elseBlock2">
   <div class="col mb-4">
     <div class="card h-100">
       <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
@@ -59,10 +125,26 @@
         <div class="progress">
           <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
         </div>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
       </div>
     </div>
   </div>
+</div>
+<ng-template #elseBlock2>
+  <div class="col mb-4">
+    <div class="card h-100">
+      <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Module 5</h5>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">Not unlocked yet!</div>
+        </div>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+</ng-template>
+<div *ngIf="mod6Number != 0; else elseBlock1">
   <div class="col mb-4">
     <div class="card h-100">
       <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
@@ -71,10 +153,24 @@
         <div class="progress">
           <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
         </div>
-        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
       </div>
     </div>
   </div>
 </div>
+<ng-template #elseBlock1>
+  <div class="col mb-4">
+    <div class="card h-100">
+      <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Module 6</h5>
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">Not unlocked yet!</div>
+        </div>
+        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+      </div>
+    </div>
+  </div>
+</ng-template>
   </div>
 
