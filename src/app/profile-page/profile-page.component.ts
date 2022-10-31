@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { createAvatar } from '@dicebear/avatars';
-import * as style from '@dicebear/avatars-avataaars-sprites';
+import { style } from '@angular/animations';
 @Component({
   selector: 'app-profile-page',
   templateUrl: './profile-page.component.html',
@@ -103,5 +102,9 @@ export class ProfilePageComponent implements OnInit {
     this.mod6Number = Math.round(((numComplete * 100) / mod1Array.length))
     this.mod6Progress = this.mod6Number + "%"
    }    
+
+   mod1ProgressStyle = style({
+    width: this.mod1Progress
+  })
 
 }

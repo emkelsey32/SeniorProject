@@ -22,7 +22,7 @@
     "@dicebear/avatars": "^4.10.5",
     "@dicebear/avatars-avataaars-sprites": "^4.10.5",
     "@ng-bootstrap/ng-bootstrap": "^13.0.0",
-    "@popperjs/core": "^2.10.2",
+    "@popperjs/core": "^2.11.6",
     "bootstrap": "^5.2.0",
     "bootstrap-icons": "^1.9.1",
     "mdb-angular-ui-kit": "^3.0.0",
