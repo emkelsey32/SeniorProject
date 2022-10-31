@@ -5,7 +5,6 @@ import { ModuleTwoPageOneComponent } from './module-two-page-one/module-two-page
 import { ModuleTwoPageThreeComponent } from './module-two-page-three/module-two-page-three.component';
 import { ModuleTwoPageTwoComponent } from './module-two-page-two/module-two-page-two.component';
 import { ModuleTwoPracticalComponent } from './module-two-practical/module-two-practical.component';
-import { Module2Component } from './module2.component';
 
 const routes: Routes = [
   {
