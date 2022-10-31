@@ -5,6 +5,7 @@ import { HomePageRoutingModule } from './home-page-routing.module';
 import { HomePageComponent } from './home-page.component';
 import { HomeNavbarModule } from '../home-navbar/home-navbar.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { CreatorsCarouselModule } from '../creators-carousel/creators-carousel.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CommonModule,
     HomePageRoutingModule,
     HomeNavbarModule,
-    NgbModule
+    NgbModule,
+    CreatorsCarouselModule
   ]
 })
 export class HomePageModule { }

@@ -1,75 +1,88 @@
-<div class="content" role="main">
-    <app-home-navbar></app-home-navbar>
-    <!-- Opening Content -->
-    <h2>Frontend Basics Course</h2>
-    <p>Insert some kind of description for the course and how its super cool and how you can sign up 
-      and learn a bunch of stuff. Also include how it is made for middle schoolers and is an 
-      intoductory course to web dev.
-    </p>
-    <div class="card-container">
-      <a class="card" target="_self" rel="noopener" href="registration-page">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z"/></svg>
-        <span>Register</span>
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>    </a>
-  
-      <a class="card" target="_self" rel="noopener" href="sign-in-page">
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
-        <span>Sign-in</span>
-        <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
-      </a>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col">
-        
-        </div>
-        <div class="col-6">
-          <ul ngbNav #nav="ngbNav" class="nav-tabs">
-            <li ngbNavItem style="padding-right: 35px; padding-left: 10px" >
-              <a ngbNavLink>Our Mission</a>
-              <ng-template ngbNavContent>
-                <a class = "card border-primary w-100" style="height:auto">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Some cool stuff about our mission.</p>
-                  </div>
-                </a>
-              </ng-template>
-            </li>
-            <li ngbNavItem style="padding-right: 35px" >
-              <a ngbNavLink>Contact Us</a>
-              <ng-template ngbNavContent>
-                <a class = "card border-primary w-100" style="height:auto">
-                  <div class="card-body" >
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">Only contact info about Emily so only she has to deal with that testing a very super duper long string to see what happens to the component.</p>
-                  </div>
-                </a>
-              </ng-template>
-            </li>
-            <li ngbNavItem>
-              <a ngbNavLink>Meet the Creators!</a>
-              <ng-template ngbNavContent>
-                <a class = "card border-primary w-100" style="height:auto">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">A PHD disertation about how cool I am.</p>
-                  </div>
-                </a>
-              </ng-template>
-            </li>
-          </ul>
-          <div [ngbNavOutlet]="nav"></div>
-        </div>
-        <div class="col">
-        </div>
-      </div>
-    </div>
-    <a class="btn btn-primary" href="#" role="button" (click)="updatePage(1,1)">Next</a>
+<html lang="en">
+    <body>
 
-    <svg id="clouds" xmlns="http://www.w3.org/2000/svg" width="2611.084" height="485.677" viewBox="0 0 2611.084 485.677">
-      <title>Gray Clouds Background</title>
-      <path id="Path_39" data-name="Path 39" d="M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z" transform="translate(142.69 -634.312)" fill="#eee"/>
-    </svg>
-  
-  </div>
+        <!-- Main navigation -->
+        <header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+                <strong>MDB</strong>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Profile</a>
+                  </li>
+                </ul>
+                <form class="form-inline">
+                  <div class="md-form my-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                  </div>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <!-- Full Page Intro -->
+          <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.webp'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-gradient align-items-center">
+              <!-- Content -->
+              <div class="container">
+                <!--Grid row-->
+                <div class="row">
+                  <!--Grid column-->
+                  <div class="col-md-6 white-text text-center text-md-left mt-xl-5 mb-5 wow fadeInLeft" data-wow-delay="0.3s">
+                    <h1 class="h1-responsive font-weight-bold mt-sm-5">Make purchases with our app </h1>
+                    <hr class="hr-light">
+                    <h6 class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt
+                    dolorum nulla magnam veniam sapiente, fugiat! Commodi sequi non animi ea dolor molestiae
+                    iste.</h6>
+                    <a class="btn btn-white">Download</a>
+                    <a class="btn btn-outline-white">Learn more</a>
+                  </div>
+                  <!--Grid column-->
+                  <!--Grid column-->
+                  <div class="col-md-6 col-xl-5 mt-xl-5 wow fadeInRight" data-wow-delay="0.3s">
+                    <img src="https://mdbootstrap.com/img/Mockups/Transparent/Small/admin-new.webp" alt="" class="img-fluid">
+                  </div>
+                  <!--Grid column-->
+                </div>
+                <!--Grid row-->
+              </div>
+              <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+          </div>
+          <!-- Full Page Intro -->
+        </header>
+        <!-- Main navigation -->
+        <!--Main Layout-->
+        <main>
+          <div class="container">
+            <!--Grid row-->
+            <div class="row py-5">
+              <!--Grid column-->
+              <div class="col-md-12 text-center">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              </div>
+              <!--Grid column-->
+            </div>
+            <!--Grid row-->
+          </div>
+        </main>
+        <!--Main Layout-->
+
+    </body>
+</html>

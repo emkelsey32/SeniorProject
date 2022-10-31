@@ -12,6 +12,8 @@ import { SideNavbarModule } from './side-navbar/side-navbar.module';
 import { ResetPasswordModule } from './modal/reset-password/reset-password.module';
 import { ResetPasswordComponent } from './modal/reset-password/reset-password.component';
 import { EditUserInfoModule } from './modal/edit-user-info/edit-user-info.module';
+import { CreatorsCarouselComponent } from './creators-carousel/creators-carousel.component';
+import { CreatorsCarouselModule } from './creators-carousel/creators-carousel.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +29,8 @@ import { EditUserInfoModule } from './modal/edit-user-info/edit-user-info.module
     HomeNavbarModule,
     SideNavbarModule,
     ResetPasswordModule, 
-    EditUserInfoModule   
+    EditUserInfoModule,
+    CreatorsCarouselModule   
   ],
   providers: [],
   bootstrap: [AppComponent]

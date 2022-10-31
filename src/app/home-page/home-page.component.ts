@@ -11,6 +11,8 @@ export class HomePageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // Animations init
+    //new WOW().init();
   }
 
   async updatePage(module: number, page:number): Promise<void> {
