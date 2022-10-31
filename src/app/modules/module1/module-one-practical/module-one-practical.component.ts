@@ -24,8 +24,6 @@ export class ModuleOnePracticalComponent implements OnInit {
     this.thirdPage = mod1Progress[2]
     this.fourthPage = mod1Progress[3]
     this.fifthPage = mod1Progress[4]
-    this.sixthPage = mod1Progress[5]
-    this.seventhPage = mod1Progress[6]
     
   }
 
