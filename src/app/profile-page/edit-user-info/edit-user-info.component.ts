@@ -36,6 +36,7 @@ export class EditUserInfoComponent {
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],      
       email: ['', Validators.required]
+
   });
 
   }
