@@ -9,7 +9,7 @@
     <div class="card h-100" (click)="startModule1()">
       <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Module 1</h5>
+        <h5 class="card-title">Module 1 - Basic HTML</h5>
           <div class="progress">
             <div class="progress-bar" role="progressbar" [ngStyle]="{'width': mod1Progress}" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">{{mod1Progress}}</div>
           </div>
@@ -23,7 +23,7 @@
       <div class="card h-100">
         <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Module 1</h5>
+          <h5 class="card-title">Module 1 - Basic HTML</h5>
           <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">Not unlocked yet!</div>
           </div>
@@ -37,7 +37,7 @@
       <div class="card h-100" (click)="startModule2()">
         <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Module 2</h5>
+          <h5 class="card-title">Module 2 - More HTML</h5>
           <div class="progress">
             <div class="progress-bar" role="progressbar" [ngStyle]="{'width': mod2Progress}" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{mod2Progress}}</div>
           </div>
@@ -51,7 +51,7 @@
       <div class="card h-100">
         <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Module 2</h5>
+          <h5 class="card-title">Module 2 - More HTML</h5>
           <div class="progress">
             <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">Not unlocked yet!</div>
           </div>
@@ -65,10 +65,11 @@
     <div class="card h-100">
       <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Module 3</h5>
+        <h5 class="card-title">Module 3 - CSS Properties</h5>
         <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+          <div class="progress-bar" role="progressbar" [ngStyle]="{'width': mod3Progress}" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{mod3Progress}}</div>
         </div>
+
         <p class="card-text">Learn basic CSS here!</p>
       </div>
     </div>
@@ -79,10 +80,11 @@
     <div class="card h-100">
       <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Module 3</h5>
+        <h5 class="card-title">Module 3 - CSS Properties</h5>
         <div class="progress">
           <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">Not unlocked yet!</div>
         </div>
+
         <p class="card-text">Learn basic CSS here!</p>
       </div>
     </div>
@@ -93,11 +95,12 @@
     <div class="card h-100">
       <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Module 4</h5>
+        <h5 class="card-title">Module 4 - Git Basics</h5>
         <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+          <div class="progress-bar" role="progressbar" [ngStyle]="{'width': mod4Progress}" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{mod4Progress}}}}</div>
         </div>
-        <p class="card-text">Learn more advanced CSS techniques here!</p>
+        <p class="card-text">Learn about the tool Git.</p>
+
       </div>
     </div>
   </div>
@@ -107,25 +110,28 @@
     <div class="card h-100">
       <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Module 4</h5>
+        <h5 class="card-title">Module 4 - Git Basics</h5>
         <div class="progress">
           <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">Not unlocked yet!</div>
         </div>
-        <p class="card-text">Learn more advanced CSS techniques here!</p>
+        <p class="card-text">Learn about the tool Git.</p>
       </div>
     </div>
   </div>
 </ng-template>
+<div class="col mb-4">
+
+</div>
 <div *ngIf="mod5Number != 0; else elseBlock2">
   <div class="col mb-4">
     <div class="card h-100">
       <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Module 5</h5>
+        <h5 class="card-title">Module 5 - Frameworks</h5>
         <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
+          <div class="progress-bar" role="progressbar" [ngStyle]="{'width': mod5Progress}" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{mod5Progress}}</div>
         </div>
-        <p class="card-text">Learn Git version control basics here!</p>
+        <p class="card-text">Learn about web frameworks like Angular and React</p>
       </div>
     </div>
   </div>
@@ -135,42 +141,16 @@
     <div class="card h-100">
       <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
       <div class="card-body">
-        <h5 class="card-title">Module 5</h5>
+        <h5 class="card-title">Module 5 - Frameworks</h5>
         <div class="progress">
           <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">Not unlocked yet!</div>
         </div>
-        <p class="card-text">Learn Git version control basics here!</p>
+        <p class="card-text">Learn about web frameworks like Angular and React</p>
       </div>
     </div>
   </div>
 </ng-template>
-<div *ngIf="mod6Number != 0; else elseBlock1">
-  <div class="col mb-4">
-    <div class="card h-100">
-      <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Module 6</h5>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">0%</div>
-        </div>
-        <p class="card-text">Open yourself to the possibilities of Angular and React for Web Development!</p>
-      </div>
-    </div>
-  </div>
-</div>
-<ng-template #elseBlock1>
-  <div class="col mb-4">
-    <div class="card h-100">
-      <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Module 6</h5>
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">Not unlocked yet!</div>
-        </div>
-        <p class="card-text">Open yourself to the possibilities of Angular and React for Web Development!</p>
-      </div>
-    </div>
-  </div>
-</ng-template>
+
+
   </div>
 

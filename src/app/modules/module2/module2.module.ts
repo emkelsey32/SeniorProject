@@ -8,7 +8,7 @@ import { ModuleTwoPageThreeComponent } from './module-two-page-three/module-two-
 
 
 import { ModuleTwoPracticalComponent } from './module-two-practical/module-two-practical.component';
-import { Module1sidenavModule } from '../module1sidenav/module1sidenav.module';
+import { Module2sidenavModule } from '../module2sidenav/module2sidenav.module';
 import { MainNavbarModule } from 'src/app/main-navbar/main-navbar.module';
 import { Module2Component } from './module2.component';
 import { ModuleTwoConceptualComponent } from './module-two-conceptual/module-two-conceptual.component';
@@ -17,6 +17,7 @@ import { ModuleTwoConceptualComponent } from './module-two-conceptual/module-two
   declarations: [
     ModuleTwoPageTwoComponent,
     ModuleTwoPageTwoComponent,
+    ModuleTwoPageOneComponent,
     ModuleTwoPracticalComponent,
     Module2Component,
     ModuleTwoConceptualComponent,
@@ -26,7 +27,7 @@ import { ModuleTwoConceptualComponent } from './module-two-conceptual/module-two
     CommonModule,
     Module2RoutingModule,
     MainNavbarModule,
-    Module1sidenavModule
+    Module2sidenavModule
   ]
 })
 export class Module2Module { }
