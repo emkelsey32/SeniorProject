@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ConfirmedValidator } from '../../../app/confirmed.validator';
-
+import { resetPassword } from 'src/API';
 @Component({
   selector: 'app-reset-password',
   templateUrl: './reset-password.component.html',
@@ -39,6 +39,15 @@ export class ResetPasswordComponent implements OnInit {
     if (this.passwordForm.invalid) {
       return;
     }
+
+    if(this.passwordForm.value.password != this.passwordForm.value.confirm_password){
+      return;
+    }
+    let user = JSON.parse(localStorage.getItem("token")!);
+
+    let newUser = await resetPassword(user.username, this.passwordForm.value.password)
+    //console.log(newUser)
+    localStorage.setItem("token", JSON.stringify(newUser))
 
     this.validForm = true;
     console.log("password reset")

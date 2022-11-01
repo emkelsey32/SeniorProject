@@ -86,6 +86,17 @@ export async function progressCourse(user, progress){
     return res.user
 }
 
+export async function resetPassword(user, updatedPass){
+    console.log("fjdslkf")
+    let res = await request('users/resetPassword',{
+        username: user,
+        updatedValue: updatedPass
+    });
+
+    console.log(res.user)
+    return res.user
+}
+
 // --- Event Creation and Attendance--------------------- // -------------------------------------------------------------------------
 
 export async function createEvent(title, description, date, startTime, endTime, password) {

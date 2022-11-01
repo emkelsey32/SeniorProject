@@ -193,4 +193,37 @@ user.post('/progressCourse', async (req, res) => {
     }
 });
 
+user.post('/resetPassword', async (req, res) => {
+    try{
+        // let token = verifyToken(req.body.username);
+        // if(token === false)
+        // {
+        //     res.json({message: 'Invalid token recieved!'});
+        //     return;
+        // }
+        
+        const customerSchema = User;
+        const Customer = mongoose.model('User', customerSchema);
+        //console.log(req.body.updatedValue)
+        let salt;
+    let hash;
+        try {
+            salt = await bcrypt.genSalt(12);
+            hash = await bcrypt.hash(req.body.updatedValue, salt);
+        }
+        catch (err) {
+            res.json({message: 'Password hashing failed.'});
+            return;
+        }
+        const user = await Customer.findOneAndUpdate({username: req.body.username}, {password: hash}, {new: true});
+        // console.log(user)
+        res.json({user});
+        
+        return;
+    }
+    catch (err){
+        res.json({message: 'Error: Something is incorrecto!' })
+    }
+});
+
 export default user;
