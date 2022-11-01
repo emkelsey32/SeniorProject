@@ -8,7 +8,6 @@ import { ModuleOnePageOneComponent } from './module-one-page-one/module-one-page
 import { ModuleOnePageThreeComponent } from './module-one-page-three/module-one-page-three.component';
 import { ModuleOnePageTwoComponent } from './module-one-page-two/module-one-page-two.component';
 import { ModuleOnePracticalComponent } from './module-one-practical/module-one-practical.component';
-import { Module1Component } from './module1.component';
 
 const routes: Routes = [
   {
