@@ -226,4 +226,30 @@ user.post('/resetPassword', async (req, res) => {
     }
 });
 
+user.post('/updateInfo', async (req, res) => {
+    try{
+        // let token = verifyToken(req.body.username);
+        // if(token === false)
+        // {
+        //     res.json({message: 'Invalid token recieved!'});
+        //     return;
+        // }
+        
+        const customerSchema = User;
+        const Customer = mongoose.model('User', customerSchema);
+        //console.log(req.body.updatedValue)
+        let salt;
+    let hash;
+       
+        const user = await Customer.findOneAndUpdate({username: req.body.username}, req.body.updatedValue, {new: true});
+        // console.log(user)
+        res.json({user});
+        
+        return;
+    }
+    catch (err){
+        res.json({message: 'Error: Something is incorrecto!' })
+    }
+});
+
 export default user;

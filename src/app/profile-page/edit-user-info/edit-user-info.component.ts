@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { style } from '@angular/animations';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { changeProfile } from 'src/API';
 
 @Component({
   selector: 'app-edit-user-info',
@@ -28,14 +29,12 @@ export class EditUserInfoComponent {
   ngOnInit(): void {
     this.firstName = (this.user!.firstName);
     this.lastName = (this.user!.lastName);
-    this.username = (this.user!.username);
     this.email = (this.user!.email);
 
 
     this.editForm = this.formBuilder.group({
       firstName: ['', Validators.required],
       lastName: ['', Validators.required],      
-      username: ['', Validators.required],
       email: ['', Validators.required]
   });
 
@@ -49,8 +48,13 @@ export class EditUserInfoComponent {
     if (this.editForm.invalid) {
       return;
     }
+    let user = JSON.parse(localStorage.getItem("token")!);
 
+    console.log(this.editForm.value)
     this.validForm = true;
+    let newUser = await changeProfile(user.username, this.editForm.value)
+    console.log(newUser)
+    localStorage.setItem("token", JSON.stringify(newUser));
     console.log("User Info Edited!")
     this.router.navigate(["/profile-page"])
   }
