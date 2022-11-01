@@ -97,6 +97,18 @@ export async function resetPassword(user, updatedPass){
     return res.user
 }
 
+export async function changeProfile(user, progress){
+    console.log(progress)
+    console.log("fjdslkf")
+    let res = await request('users/updateInfo',{
+        username: user,
+        updatedValue: progress
+    });
+
+    console.log(res.user)
+    return res.user
+}
+
 // --- Event Creation and Attendance--------------------- // -------------------------------------------------------------------------
 
 export async function createEvent(title, description, date, startTime, endTime, password) {
