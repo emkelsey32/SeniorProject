@@ -37,10 +37,12 @@ export class ResetPasswordComponent implements OnInit {
     this.validForm = true;
     let token;
     if (this.passwordForm.invalid) {
+      this.validForm = false
       return;
     }
 
     if(this.passwordForm.value.password != this.passwordForm.value.confirm_password){
+      this.validForm = false
       return;
     }
     let user = JSON.parse(localStorage.getItem("token")!);
