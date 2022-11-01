@@ -2,17 +2,20 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { EditUserInfoComponent } from './edit-user-info.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MainNavbarModule } from 'src/app/main-navbar/main-navbar.module';
+import { ProfilePageRoutingModule } from '../profile-page-routing.module';
 
 
 @NgModule({
-  declarations: [EditUserInfoComponent],
+  declarations: [],
   imports: [
     CommonModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MainNavbarModule,
+    ProfilePageRoutingModule
   ],
   exports: [
-    EditUserInfoComponent
   ]
 })
 export class EditUserInfoModule { }
