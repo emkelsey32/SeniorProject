@@ -4,20 +4,21 @@ import { CommonModule } from '@angular/common';
 import { ProfilePageRoutingModule } from './profile-page-routing.module';
 import { ProfilePageComponent } from './profile-page.component';
 import { MainNavbarModule } from '../main-navbar/main-navbar.module';
-import { EditUserInfoModule } from '../modal/edit-user-info/edit-user-info.module';
-import { ResetPasswordModule } from '../modal/reset-password/reset-password.module';
-
+import { EditUserInfoComponent } from './edit-user-info/edit-user-info.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
-    ProfilePageComponent
+    ProfilePageComponent,
+    EditUserInfoComponent,
+    ResetPasswordComponent
   ],
   imports: [
     CommonModule,
     ProfilePageRoutingModule,
     MainNavbarModule,
-    EditUserInfoModule,
-    ResetPasswordModule
+    ReactiveFormsModule
   ]
 })
 export class ProfilePageModule { }

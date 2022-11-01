@@ -1,90 +1,80 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-  </head>
-  <body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
-    <div class="container-fluid d-flex w-100 h-100 flex-column">
       <div class="row">
-        <div class="col">
-            <img src="../../assets/cookie-the-pom-gySMaocSdqs-unsplash.jpg" alt="Dog registering on computer">
+        <div class="col-6">
+          <div class="half-bg" style="background-image: url('../../assets/cookie-the-pom-gySMaocSdqs-unsplash.jpg')"></div>
         </div>
-        <div class="col">
-          <div class="row">
-            <div class="col">
-                <button [routerLink]="['']" type="button" class="btn btn-primary">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                  </svg>
-                  Back to Home Page
-                </button>
+        <div class="col-6">
+          <div class="right-container">
+              <div class="row">
+                <div class="col">
+                    <button [routerLink]="['']" type="button" class="btn btn-primary">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                      </svg>
+                      Back to Home Page
+                    </button>
+                </div>
+              </div>
+              <div class="row">
+                <h4>Create new account</h4>
+              </div>
+              <div class="row">
+                <div class="form-row">
+                  <form [formGroup]="registerForm" (ngSubmit)="registerAccount()">
+                    <div class="form-group">
+                      <label for="firstName">First Name</label>
+                      <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['firstName'].errors }" />
+                      <div *ngIf="submitted && f['firstName'].errors" class="invalid-feedback">
+                          <div *ngIf="f['firstName'].errors['required']">First Name is required</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="lastName">Last Name</label>
+                      <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['lastName'].errors }" />
+                      <div *ngIf="submitted && f['lastName'].errors" class="invalid-feedback">
+                          <div *ngIf="f['lastName'].errors['required']">Last Name is required</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="username">Username</label>
+                      <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['username'].errors }" />
+                      <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
+                          <div *ngIf="f['username'].errors['required']">Username is required</div>
+                      </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
+                    <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                        <div *ngIf="f['email'].errors['required']">Email is required</div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="password">Password</label>
+                      <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
+                      <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                          <div *ngIf="f['password'].errors['required']">Password is required</div>
+                      </div>
+                  </div>
+                    <div class="mb-3 form-check">
+                      <input type="checkbox" class="form-check-input" id="termsCheck">
+                      <label class="form-check-label" for="termsCheck">
+                        I have read the 
+                        <a href="terms-and-conditions" target="_blank">Terms and Conditions</a>
+                      </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                    <div class="alert alert-warning" *ngIf="submitted && !validForm">
+                      Signup failed!<br />
+                    </div>
+                  </form>
+                </div>
+              </div>
+              <div class="row-inline">
+                Have an account? <a href="sign-in-page" target="_self">Sign in</a>          
+              </div>
             </div>
           </div>
-          <div class="row">
-            <h4>Create new account</h4>
-          </div>
-          <div class="row">
-            <div class="form-row">
-              <form [formGroup]="registerForm" (ngSubmit)="registerAccount()">
-                <div class="form-group">
-                  <label for="firstName">First Name</label>
-                  <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['firstName'].errors }" />
-                  <div *ngIf="submitted && f['firstName'].errors" class="invalid-feedback">
-                      <div *ngIf="f['firstName'].errors['required']">First Name is required</div>
-                  </div>
-              </div>
-              <div class="form-group">
-                  <label for="lastName">Last Name</label>
-                  <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['lastName'].errors }" />
-                  <div *ngIf="submitted && f['lastName'].errors" class="invalid-feedback">
-                      <div *ngIf="f['lastName'].errors['required']">Last Name is required</div>
-                  </div>
-              </div>
-              <div class="form-group">
-                  <label for="username">Username</label>
-                  <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['username'].errors }" />
-                  <div *ngIf="submitted && f['username'].errors" class="invalid-feedback">
-                      <div *ngIf="f['username'].errors['required']">Username is required</div>
-                  </div>
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" />
-                <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
-                    <div *ngIf="f['email'].errors['required']">Email is required</div>
-                </div>
-              </div>
-              <div class="form-group">
-                  <label for="password">Password</label>
-                  <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" />
-                  <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
-                      <div *ngIf="f['password'].errors['required']">Password is required</div>
-                  </div>
-              </div>
-                <div class="mb-3 form-check">
-                  <input type="checkbox" class="form-check-input" id="termsCheck">
-                  <label class="form-check-label" for="termsCheck">
-                    I have read the 
-                    <a href="terms-and-conditions" target="_blank">Terms and Conditions</a>
-                  </label>
-                </div>
-                <button type="submit" class="btn btn-primary">Register</button>
-                <div class="alert alert-warning" *ngIf="submitted && !validForm">
-                  Signup failed!<br />
-                </div>
-              </form>
-            </div>
-          </div>
-          <div class="row-inline">
-            Have an account? <a href="sign-in-page" target="_self">Sign in</a>          
-          </div>
         </div>
-      </div>
-    </div>
-  </body>
-</html>
 
 

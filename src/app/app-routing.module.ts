@@ -30,7 +30,16 @@ const routes: Routes = [
   {
     path: 'about-page', 
     loadChildren: () => import('./about-internal-page/about-internal-page.module').then(m => m.AboutInternalPageModule)  
-  },{
+  },
+  {
+    path: 'edit-user-info', 
+    loadChildren: () => import('./profile-page/edit-user-info/edit-user-info.module').then(m => m.EditUserInfoModule)  
+  },
+  {
+    path: 'reset-password', 
+    loadChildren: () => import('./profile-page/reset-password/reset-password.module').then(m => m.ResetPasswordModule)  
+  },
+  {
     path: 'm1', 
     loadChildren: () => import('./modules/module1/module1.module').then(m => m.Module1Module)
   },
