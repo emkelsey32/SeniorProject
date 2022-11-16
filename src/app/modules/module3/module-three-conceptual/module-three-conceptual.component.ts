@@ -46,7 +46,7 @@ export class ModuleThreeConceptualComponent implements OnInit {
         module2:{
           progress: [1,1,1,1,1]},
         module3:{
-            progress: [0,0,0,0]}}
+            progress: [1,1,1,1,1]}}
       ]}
       console.log(update)
       let newUser = await progressCourse(user.username, update)

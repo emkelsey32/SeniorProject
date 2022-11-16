@@ -76,7 +76,8 @@ user.post('/create', async (req, res) => {
         username: req.body.username,
         email: req.body.email,
         password: hash,
-        progress: test
+        progress: test,
+        complete: false
     });
     console.log(user.progress)
     try {

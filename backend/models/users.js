@@ -52,6 +52,8 @@ const UserSchema = mongoose.Schema({
                 type: Array
             }
         }                          
-    }]
+    }],
+    complete: { type: Boolean}
+
 });
 export default UserSchema;
