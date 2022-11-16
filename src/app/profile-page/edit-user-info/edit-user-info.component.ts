@@ -33,9 +33,9 @@ export class EditUserInfoComponent {
 
 
     this.editForm = this.formBuilder.group({
-      firstName: ['', Validators.required],
-      lastName: ['', Validators.required],      
-      email: ['', Validators.required]
+      firstName: [this.firstName, Validators.required],
+      lastName: [this.lastName, Validators.required],      
+      email: [this.email, Validators.required]
 
   });
 
