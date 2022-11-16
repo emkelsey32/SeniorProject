@@ -3,16 +3,25 @@
     
     <!-- Module Cards -->
     <div class="row row-cols-1 row-cols-md-3">
-      <div *ngIf="mod1Number != 0; else elseBlock6">
+      <div *ngIf="mod1Open == true; else elseBlock6">
 
   <div class="col mb-4">
     <div class="card h-100" (click)="startModule1()">
       <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Module 1 - Basic HTML</h5>
+        <div *ngIf="mod1Number > 0; else elseBlock7">
+
           <div class="progress">
             <div class="progress-bar" role="progressbar" [ngStyle]="{'width': mod1Progress}" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">{{mod1Progress}}</div>
           </div>
+        
+          </div>
+          <ng-template #elseBlock7>
+            <div class="progress-bar" role="progressbar" style="width: 100%; background-color: #0d6efd; " aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Start this Module!</div>
+        
+          </ng-template>
+          
         <p class="card-text">Learn basic HTML here!</p>
       </div>
     </div>
@@ -32,15 +41,27 @@
       </div>
     </div>
   </ng-template>
-  <div *ngIf="mod2Number != 0; else elseBlock5">
+  <div *ngIf="mod2Open == true; else elseBlock5">
     <div class="col mb-4">
       <div class="card h-100" (click)="startModule2()">
         <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">Module 2 - More HTML</h5>
+          <div *ngIf="mod2Number > 0; else elseBlock7">
+
           <div class="progress">
+
             <div class="progress-bar" role="progressbar" [ngStyle]="{'width': mod2Progress}" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{mod2Progress}}</div>
+          
           </div>
+          
+          
+          </div>
+          
+          <ng-template #elseBlock7>
+            <div class="progress-bar" role="progressbar" style="width: 100%; background-color: #0d6efd; " aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Start this Module!</div>
+        
+          </ng-template>
           <p class="card-text">Learn more advanced HTML techniques here!</p>
         </div>
       </div>
@@ -60,16 +81,21 @@
       </div>
     </div>
   </ng-template>
-  <div *ngIf="mod3Number != 0; else elseBlock4">
+  <div *ngIf="mod3Open == true; else elseBlock4">
   <div class="col mb-4">
     <div class="card h-100" (click)="startModule3()">
       <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Module 3 - CSS Properties</h5>
+        <div *ngIf="mod3Number > 0; else elseBlock7">
         <div class="progress">
           <div class="progress-bar" role="progressbar" [ngStyle]="{'width': mod3Progress}" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{mod3Progress}}</div>
         </div>
-
+      </div>
+      <ng-template #elseBlock7>
+        <div class="progress-bar" role="progressbar" style="width: 100%; background-color: #0d6efd; border-radius: 10px; color: white; font-size: 11px; " aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Start this Module!</div>
+    
+      </ng-template>
         <p class="card-text">Learn basic CSS here!</p>
       </div>
     </div>
@@ -90,15 +116,22 @@
     </div>
   </div>
 </ng-template>
-<div *ngIf="mod4Number != 0; else elseBlock3">
+<div *ngIf="mod4Open == true; else elseBlock3">
   <div class="col mb-4">
     <div class="card h-100">
       <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Module 4 - Git Basics</h5>
+        <div *ngIf="mod4Number > 0; else elseBlock7">
+
         <div class="progress">
           <div class="progress-bar" role="progressbar" [ngStyle]="{'width': mod4Progress}" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{mod4Progress}}}}</div>
         </div>
+        </div>
+        <ng-template #elseBlock7>
+          <div class="progress-bar" role="progressbar" style="width: 100%; background-color: #0d6efd; border-radius: 10px; color: white; font-size: 11px; " aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Start this Module!</div>
+      
+        </ng-template>
         <p class="card-text">Learn about the tool Git.</p>
 
       </div>
@@ -122,15 +155,22 @@
 <div class="col mb-4">
 
 </div>
-<div *ngIf="mod5Number != 0; else elseBlock2">
+<div *ngIf="mod5Open == true; else elseBlock2">
   <div class="col mb-4">
     <div class="card h-100">
       <img src="./assets/pexels-francesco-ungaro-281260.jpg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Module 5 - Frameworks</h5>
         <div class="progress">
+          <div *ngIf="mod5Number > 0; else elseBlock7">
+
           <div class="progress-bar" role="progressbar" [ngStyle]="{'width': mod5Progress}" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{mod5Progress}}</div>
         </div>
+        </div>
+        <ng-template #elseBlock7>
+          <div class="progress-bar" role="progressbar" style="width: 100%; background-color: #0d6efd; border-radius: 10px; color: white; font-size: 11px; " aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Start this Module!</div>
+      
+        </ng-template>
         <p class="card-text">Learn about web frameworks like Angular and React</p>
       </div>
     </div>
@@ -153,4 +193,6 @@
 
 
   </div>
+
+  
 
