@@ -4,12 +4,35 @@
     padding-bottom: 4vh;
 }
 
-.backgroundColorLink:hover{
-    color: grey
-}
 
 .backgroundColorDisabled{
     color: rgb(169, 169, 169);
     font-size: 2vh;
     padding-bottom: 4vh;
+}
+
+.btn {
+    background-color: transparent;
+    margin-bottom: 3vh;
+    font-weight: 600;
+}
+.btn:hover {
+    background-color: #3687d9;
+    border-width: 3px;
+    border-color: aliceblue;
+    transition: 0.4s;
+}
+
+.nav {
+  padding-top: 8vh;
+  padding-left: 3vh; 
+  padding-right: 3vh;
+  position: fixed; 
+  height: 100vh; 
+  color: white; 
+  border-style: groove; 
+  border-width: 3px; 
+  border-color: #1976d2;
+  border-radius: 2px;
+  background-color: #1976d2;
 }

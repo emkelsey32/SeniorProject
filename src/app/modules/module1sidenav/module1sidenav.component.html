@@ -1,74 +1,37 @@
-<ul class="nav flex-column" style="paddingTop: 8vh; paddingLeft: 5vh; position: fixed; height: 100vh; color: white;background-color: #1976d2;">
-            
-    <!-- <div *ngIf="firstPage == 1; else elseBlock"> -->
-    <div *ngIf="firstPage == 1; else elseBlock">
+<ul class="nav flex-column">
+    <div>
         <li class="nav-item">
-            <a class="nav-link backgroundColorLink" href="m1/module-1.1" >All About Tags!</a>
+            <a class="btn btn-primary" href="m1/module-1.1" >All About Tags!</a>
         </li>
     </div>
-    <ng-template #elseBlock>
+    <div>
         <li class="nav-item">
-            <a class="nav-link backgroundColorDisabled disabled" href="" >All About Tags!</a>
-        </li>
-    </ng-template>
-    <div *ngIf="secondPage == 1; else elseBlock2">
-        <li class="nav-item">
-            <a class="nav-link backgroundColorLink" href="m1/module-1.2" >What's all this Spacing?</a>
+            <a class="btn btn-primary" href="m1/module-1.2" >What's all this Spacing?</a>
         </li>
     </div>
-    <ng-template #elseBlock2>
+    <div>
         <li class="nav-item">
-            <a class="nav-link backgroundColorDisabled disabled" href="" >What's All This Spacing?</a>
-        </li>
-    </ng-template>
-    <div *ngIf="thirdPage == 1; else elseBlock3">
-        <li class="nav-item">
-            <a class="nav-link backgroundColorLink" href="m1/module-1.3" >On the Topic of Headers</a>
+            <a class="btn btn-primary" href="m1/module-1.3" >On the Topic of Headers</a>
         </li>
     </div>
-    <ng-template #elseBlock3>
+    <div>
         <li class="nav-item">
-            <a class="nav-link backgroundColorDisabled disabled" href="" >On the Topic of Headers</a>
-        </li>
-    </ng-template>
-    <div *ngIf="fourthPage == 1; else elseBlock4">
-        <li class="nav-item">
-            <a class="nav-link backgroundColorLink" href="m1/module-1.4" >The &lt;div&gt; Tag</a>
+            <a class="btn btn-primary" href="m1/module-1.4" >The &lt;div&gt; Tag</a>
         </li>
     </div>
-    <ng-template #elseBlock4>
+    <div>
         <li class="nav-item">
-            <a class="nav-link backgroundColorDisabled disabled" href="" >The &lt;div&gt; Tag</a>
-        </li>
-    </ng-template>
-    <div *ngIf="fifthPage == 1; else elseBlock5">
-        <li class="nav-item">
-            <a class="nav-link backgroundColorLink" href="m1/module-1.5" >Extra HTML Functions</a>
+            <a class="btn btn-primary" href="m1/module-1.5" >Extra HTML Functions</a>
         </li>
     </div>
-    <ng-template #elseBlock5>
+    <div>
         <li class="nav-item">
-            <a class="nav-link backgroundColorDisabled disabled" href="" >Extra HTML Functions</a>
-        </li>
-    </ng-template>
-    <div *ngIf="sixthPage == 1; else elseBlock6">
-        <li class="nav-item">
-            <a class="nav-link backgroundColorLink" href="m1/module-1.conceptual" >Conceptual Check</a>
+            <a class="btn btn-primary" href="m1/module-1.conceptual" >Conceptual Check</a>
         </li>
     </div>
-    <ng-template #elseBlock6>
+    <div>
         <li class="nav-item">
-            <a class="nav-link backgroundColorDisabled disabled" href="" >Conceptual Check</a>
-        </li>
-    </ng-template>
-    <div *ngIf="seventhPage == 1; else elseBlock7">
-        <li class="nav-item">
-            <a class="nav-link backgroundColorLink" href="m1/module-1.practical" >Practical Assignment</a>
+            <a class="btn btn-primary" href="m1/module-1.practical" >Practical Assignment</a>
         </li>
     </div>
-    <ng-template #elseBlock7>
-        <li class="nav-item">
-            <a class="nav-link backgroundColorDisabled disabled" href="" >Practical Assignment</a>
-        </li>
-    </ng-template>
 </ul>
