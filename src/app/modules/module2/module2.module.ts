@@ -16,7 +16,6 @@ import { ModuleTwoConceptualComponent } from './module-two-conceptual/module-two
 @NgModule({
   declarations: [
     ModuleTwoPageTwoComponent,
-    ModuleTwoPageTwoComponent,
     ModuleTwoPageOneComponent,
     ModuleTwoPracticalComponent,
     Module2Component,
