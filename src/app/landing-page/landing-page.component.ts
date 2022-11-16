@@ -112,6 +112,11 @@ export class LandingPageComponent implements OnInit {
     this.router.navigate(['/m2/module-2.1'])
 
   }
+
+  startModule3(): void{
+    this.router.navigate(['/m3/module-3.1'])
+
+  }
   mod1ProgressStyle = style({
       width: this.mod1Progress
   })

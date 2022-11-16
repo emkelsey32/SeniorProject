@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ModuleTwoPracticalRoutingModule } from './module-two-practical-routing.module';
+import { ModuleThreePageOneRoutingModule } from './module-three-page-one-routing.module';
 import { MainNavbarModule } from 'src/app/main-navbar/main-navbar.module';
 
 
@@ -10,8 +10,8 @@ import { MainNavbarModule } from 'src/app/main-navbar/main-navbar.module';
   declarations: [],
   imports: [
     CommonModule,
-    ModuleTwoPracticalRoutingModule,
+    ModuleThreePageOneRoutingModule,
     MainNavbarModule
   ]
 })
-export class ModuleTwoPracticalModule { }
+export class ModuleThreePageOneModule { }
