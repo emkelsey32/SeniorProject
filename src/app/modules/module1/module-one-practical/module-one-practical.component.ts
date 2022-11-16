@@ -46,7 +46,7 @@ export class ModuleOnePracticalComponent implements OnInit {
         {module1:{
           progress: [1,1,1,1,1,1,1]},
         module2:{
-          progress: [1,0,0,0,0,0,0]}}
+          progress: [1,0,0,0]}}
       ]}
       console.log(update)
       let newUser = await progressCourse(user.username, update)

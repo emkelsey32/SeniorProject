@@ -23,7 +23,6 @@ export class ModuleTwoPageTwoComponent implements OnInit {
     this.secondPage = mod1Progress[1]
     this.thirdPage = mod1Progress[2]
     this.fourthPage = mod1Progress[3]
-    this.fifthPage = mod1Progress[4]
     
   }
 
@@ -39,14 +38,14 @@ export class ModuleTwoPageTwoComponent implements OnInit {
       }
       
       console.log(user.progress)
-      if(sum1 >5){
+      if(sum1 >2){
         update = mod1Progress;
       }else{
       update = {progress: [
         {module1:{
           progress: [1,1,1,1,1,1,1]},
         module2:{
-          progress: [1,1,1,0,0]},
+          progress: [1,1,1,0]},
         module3:{
             progress: [0,0,0,0]}}
       ]}

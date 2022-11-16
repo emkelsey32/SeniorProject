@@ -11,9 +11,6 @@ export class ModuleTwoPracticalComponent implements OnInit {
   secondPage = 0;
   thirdPage = 0;
   fourthPage = 0;
-  fifthPage = 0;
-  sixthPage = 0;
-  seventhPage = 0;
   constructor(private router: Router) { }
 
   ngOnInit(): void {
@@ -23,7 +20,6 @@ export class ModuleTwoPracticalComponent implements OnInit {
     this.secondPage = mod1Progress[1]
     this.thirdPage = mod1Progress[2]
     this.fourthPage = mod1Progress[3]
-    this.fifthPage = mod1Progress[4]
     
   }
 
@@ -39,14 +35,14 @@ export class ModuleTwoPracticalComponent implements OnInit {
       }
       
       console.log(user.progress)
-      if(sum1 >5){
+      if(sum1 >4){
         update = mod1Progress;
       }else{
       update = {progress: [
         {module1:{
           progress: [1,1,1,1,1,1,1]},
         module2:{
-          progress: [1,1,1,1,1]},
+          progress: [1,1,1,1]},
         module3:{
             progress: [1,0,0,0]}}
       ]}
