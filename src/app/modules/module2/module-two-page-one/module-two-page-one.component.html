@@ -11,35 +11,76 @@
         <div class="col-sm-10">
         <div style="paddingTop: 8vh; paddingLeft: 5%;"> 
             <h2 style="font-size: 3vh;  margin-bottom: 2%;">
-                2.1
+                Buttons Galore!
             </h2>
             <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
-                Tags are the basic building blocks of HTML and let us specify a lot of things about what that building block is supposed to do or contain. For example, we could use a paragraph tag to put regular text into. 
+                Buttons are something that everyone knows about in real life: a small thing that you press and then something new happens, like a doorbell. Just like in real life, buttons on a webpage work the same way. You can also set the behavior that your button will exhibit after a user interacts with the button, which lets you set your button to do something like change the current web page or update a feature of the page. Your first question after learning about buttons might be ‘how do I actually make one?’ and to answer that question, you would use the button tag denoted by: 
             </p>
-            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
-                Also, the way that tags are formatted is by having the tags ID wrapped in “&lt;” “&gt;” characters. Going back to the paragraph tag example, you would type “&lt;p&gt;” to place an opening paragraph tag. 
-            </p>
-            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
-                Another important thing about tags is that you have an opening and closing tag, similar to how you have opening and closing parentheses like this: “(” “)”. An opening tag simply has the ID within the brackets like this: &lt;p&gt;, however the closing tag has a forward slash in the first angle bracket like this &lt;/p&gt;. A full set of opening and closing tags for a paragraph tag should look like this: &lt;p&gt; &lt;/p&gt;. 
-            </p>
-            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
-                These tags just help us define what should be held within the tags, just like how with parentheses the actual content is held within them. Similarly, with tags you just put the content that you would want in them between the tags. For example, you could write &lt;p&gt; I love HTML! &lt;/p&gt; and the text “I love HTML	!” would be displayed on the web page. 
-            </p>
-            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
-                Building off of this, you can even have the opening and closing tags be on separate lines and nothing would necessarily change. For example, if you were to type 
-            </p>
-            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">    
-                “&lt;p&gt;
-            <br>
             <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
-	            I love HTML!
+	            &lt;button&gt; &lt;/button&gt;
             <br>
-            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
-                &lt;/p&gt;”
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                What this code looks like on a web page is this:
+            </p>
+            <button style="marginLeft: 5%; marginBottom: 5%"> 
+            
+            </button>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                You can also set the text of a button to whatever you want by placing that text between the two button tags. Once you do this, you can then modify the button to set its behavior. There are many different behaviors that you can set, but just to start we’ll go with the most basic type of behavior: clicking! To set this, in the opening button tag you would add ‘(click)= ” ” ’ where everything within the double quotes is the actions that your program will take after clicking on the button. 
             </p>
             <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
-                the results would still be the same as if you wrote everything in one line, your code is just more readable, which is an important thing to consider.
+                This is especially useful when trying to connect your html to more advanced languages such as TypeScript or JavaScript, which allows your html button to call a function in one of those languages. We know you may not have any experience with another coding language, and that's perfectly fine for now! The only thing that you need to know is that you can make something called a function, and a function takes in input through something called a parameter. 
             </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                A function is just a chunk of code that can be repeated by just referring to one thing. Think about how turning on your computer is a very complicated process, but all you need to know how to do is press the power button. If that were a function, you could say that its name would be turnOn and every time you press the button you call the function turnOn that causes your computer to do everything it needs to do to actually turn on. A parameter is a value that you have to give a function, and that function can then use it to complete its task.
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                The microwave doesn’t have the ability to do anything to your food until you put it inside, which is exactly how a parameter works with a function. To give you an example of this would practically work, you call a function by just typing its name, and then immediately follow it with a set of parentheses. Within the parenthesis you can include a parameter if you need one. This would look something like this:
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
+	            useMicrowave(cheesePizza)
+            <br>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                Or if there was no parameter:
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
+	            turnOn()
+            <br>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                For example of what this would look like within a button, if you have a TypeScript function called ‘changeColor()’ and it accepts one parameter called ‘hexColor’ you could use a button to allow the user to call the changeColor function with a set value. To see this in actual code, consider the following line:
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
+	            &lt;button (click=”changeColor(‘#09b8e8’)”)&gt; Change to Blue! &lt;/button&gt;
+            <br>
+
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                The button would now look like this:
+            </p>
+            <button style="marginLeft: 5%"> Change to Blue! 
+
+            </button>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                Do you see how each part of that line of code corresponds to something we’ve talked about so far? If you did great! If not, try taking a closer look at the text above and then examine the code again. 
+            </p>
+            
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                It is also important to know that you can still apply all the usual things to buttons like stylings. For example, if you wanted to shift the button to right you could set the style attribute to something like ‘paddingLeft: 5%’ and that would be perfectly valid here!
+            </p>
+            
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                To give you a real example of this, we’re going to build upon the previous one and add in a new style:
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
+	            &lt;button (click)=”changeColor(‘#09b8e8’)” style=”marginLeft: 5%; background-color: lightblue”&gt; Change to Blue! &lt;/button&gt; 
+            <br>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                Finally, the button would look like this:
+            </p>
+            <button style="marginLeft: 5%; background-color: lightblue"> Change to Blue! </button>
+            <br>
+            <br>
+            <br> 
+            <br> 
             <button (click)="updatePage(1,1, '/m2/module-2.2')"  style="marginLeft: 2%; ">Move to Next Lesson!</button>
             <div style="paddingBottom: 5%"> </div>
         </div>
