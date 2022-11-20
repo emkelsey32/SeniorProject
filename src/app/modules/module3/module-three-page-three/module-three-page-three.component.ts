@@ -16,7 +16,7 @@ export class ModuleThreePageThreeComponent implements OnInit {
 
   ngOnInit(): void {
     let user = JSON.parse(localStorage.getItem("token")!);
-    let mod1Progress = user.progress[0].module1.progress;
+    let mod1Progress = user.progress[0].module3.progress;
     this.firstPage = mod1Progress[0]
     this.secondPage = mod1Progress[1]
     this.thirdPage = mod1Progress[2]
@@ -30,14 +30,14 @@ export class ModuleThreePageThreeComponent implements OnInit {
     console.log("here")
     let update = null;
       let user = JSON.parse(localStorage.getItem("token")!);
-      let mod1Progress = user.progress[0].module2.progress;
+      let mod1Progress = user.progress[0].module3.progress;
       let sum1 = 0
       for(let i = 0; i < mod1Progress.length; i++){
           sum1 += mod1Progress[i];
       }
       
       console.log(user.progress)
-      if(sum1 >5){
+      if(sum1 >3){
         update = mod1Progress;
       }else{
       update = {progress: [

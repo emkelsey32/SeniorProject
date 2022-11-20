@@ -31,7 +31,7 @@ export class LandingPageComponent implements OnInit {
 
   ngOnInit(): void {
     let user = JSON.parse(localStorage.getItem("token")!)
-    console.log(user)
+    // console.log(user)
     let mod1Array = user!.progress[0].module1.progress;
 
     let numComplete = 0;
@@ -45,14 +45,14 @@ export class LandingPageComponent implements OnInit {
     }else{
       this.mod1Number = Math.round(((numComplete * 100) / mod1Array.length) - (100 / mod1Array.length))
     }
-    console.log("LOOKIE")
-    console.log(this.mod1Number)
+    // console.log("LOOKIE")
+    // console.log(this.mod1Number)
     if(mod1Array[0] == 1){
       this.mod1Open = true;
     }
-    console.log(this.mod1Number)
+    // console.log(this.mod1Number)
     this.mod1Progress = this.mod1Number + "%"
-    console.log(user!.progress)
+    // console.log(user!.progress)
     let mod2Array = user!.progress[0].module2.progress;
     numComplete = 0;
     if(mod2Array[0] == 1){
@@ -68,7 +68,8 @@ export class LandingPageComponent implements OnInit {
       }
       if(mod2Array[0] == 1){
         this.mod2Open = true;
-      }    console.log(this.mod2Number)
+      }  
+        // console.log(this.mod2Number)
       this.mod2Progress = this.mod2Number + "%"
     }
     let mod3Array = user!.progress[0].module3.progress;
@@ -110,7 +111,7 @@ export class LandingPageComponent implements OnInit {
     }    
     this.mod4Progress = this.mod4Number + "%"
   }
-    console.log(this.mod4Number)
+    // console.log(this.mod4Number)
     numComplete = 0;
     if(mod5Array[0] == 1){
     for(let i = 0; i < mod5Array.length; i++){
@@ -125,15 +126,15 @@ export class LandingPageComponent implements OnInit {
     }
     if(mod5Array[0] == 1){
       this.mod5Open = true;
-    }    this.mod5Progress = this.mod4Number + "%"
+    }    this.mod5Progress = this.mod5Number + "%"
   }
     
   }
 
   async someFunc() {
     var something = await getUsers();
-    console.log(await getUsers());
-    console.log("Hi")
+    // console.log(await getUsers());
+    // console.log("Hi")
 
   }
   startModule1(): void{
@@ -147,6 +148,14 @@ export class LandingPageComponent implements OnInit {
 
   startModule3(): void{
     this.router.navigate(['/m3/module-3.1'])
+
+  }
+  startModule4(): void{
+    this.router.navigate(['/m4/module-4.1'])
+
+  }
+  startModule5(): void{
+    this.router.navigate(['/m5/module-5.1'])
 
   }
   mod1ProgressStyle = style({

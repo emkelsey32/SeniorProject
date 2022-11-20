@@ -1,0 +1,47 @@
+<div>
+    <app-main-navbar></app-main-navbar>
+</div>
+<div class="vstack gap-5">
+        <div class="row">
+          <div class="col-sm-2">
+            <app-module5sidenav></app-module5sidenav>
+          </div>
+        
+        <!-- THIS IS WHERE COURSE CONTENT WILL GO -->
+        <div class="col-sm-10">
+        <div style="paddingTop: 8vh; paddingLeft: 5%;"> 
+            <h2 style="font-size: 3vh;  margin-bottom: 2%;">
+                All About Tags!
+            </h2>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                Tags are the basic building blocks of HTML and let us specify a lot of things about what that building block is supposed to do or contain. For example, we could use a paragraph tag to put regular text into. 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                Also, the way that tags are formatted is by having the tags ID wrapped in “&lt;” “&gt;” characters. Going back to the paragraph tag example, you would type “&lt;p&gt;” to place an opening paragraph tag. 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                Another important thing about tags is that you have an opening and closing tag, similar to how you have opening and closing parentheses like this: “(” “)”. An opening tag simply has the ID within the brackets like this: &lt;p&gt;, however the closing tag has a forward slash in the first angle bracket like this &lt;/p&gt;. A full set of opening and closing tags for a paragraph tag should look like this: &lt;p&gt; &lt;/p&gt;. 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                These tags just help us define what should be held within the tags, just like how with parentheses the actual content is held within them. Similarly, with tags you just put the content that you would want in them between the tags. For example, you could write &lt;p&gt; I love HTML! &lt;/p&gt; and the text “I love HTML	!” would be displayed on the web page. 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                Building off of this, you can even have the opening and closing tags be on separate lines and nothing would necessarily change. For example, if you were to type 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">    
+                “&lt;p&gt;
+            <br>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
+	            I love HTML!
+            <br>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
+                &lt;/p&gt;”
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                the results would still be the same as if you wrote everything in one line, your code is just more readable, which is an important thing to consider.
+            </p>
+            <button (click)="updatePage(1,1, '/m5/module-5.2')"  style="marginLeft: 2%; ">Move to Next Lesson!</button>
+            <div style="paddingBottom: 5%"> </div>
+        </div>
+    </div>
+    </div>

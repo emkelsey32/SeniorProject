@@ -18,7 +18,7 @@ export class ModuleThreePracticalComponent implements OnInit {
 
   ngOnInit(): void {
     let user = JSON.parse(localStorage.getItem("token")!);
-    let mod1Progress = user.progress[0].module1.progress;
+    let mod1Progress = user.progress[0].module3.progress;
     this.firstPage = mod1Progress[0]
     this.secondPage = mod1Progress[1]
     this.thirdPage = mod1Progress[2]
@@ -32,7 +32,7 @@ export class ModuleThreePracticalComponent implements OnInit {
     console.log("here")
     let update = null;
       let user = JSON.parse(localStorage.getItem("token")!);
-      let mod1Progress = user.progress[0].module2.progress;
+      let mod1Progress = user.progress[0].module3.progress;
       let sum1 = 0
       for(let i = 0; i < mod1Progress.length; i++){
           sum1 += mod1Progress[i];
@@ -50,7 +50,7 @@ export class ModuleThreePracticalComponent implements OnInit {
         module3:{
             progress: [1,1,1,1,1]},
         module4:{
-            progress: [1,0,0,0]
+            progress: [1,0,0,0,0,0,0]
         }
           }
       ]},

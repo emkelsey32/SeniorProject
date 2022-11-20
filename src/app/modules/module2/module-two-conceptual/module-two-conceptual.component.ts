@@ -26,7 +26,7 @@ export class ModuleTwoConceptualComponent implements OnInit {
 
   async updatePage(module: number, page:number, reroutePage: string): Promise<void> {
     //call findOneAndUpdate
-    console.log("here")
+    // console.log("here")
     let update = null;
       let user = JSON.parse(localStorage.getItem("token")!);
       let mod1Progress = user.progress[0].module2.progress;
@@ -35,7 +35,7 @@ export class ModuleTwoConceptualComponent implements OnInit {
           sum1 += mod1Progress[i];
       }
       
-      console.log(user.progress)
+      // console.log(user.progress)
       if(sum1 >3){
         update = mod1Progress;
       }else{
@@ -47,7 +47,7 @@ export class ModuleTwoConceptualComponent implements OnInit {
         module3:{
             progress: [0,0,0,0]}}
       ]}
-      console.log(update)
+      // console.log(update)
       let newUser = await progressCourse(user.username, update)
     localStorage.setItem("token", JSON.stringify(newUser))
     }
