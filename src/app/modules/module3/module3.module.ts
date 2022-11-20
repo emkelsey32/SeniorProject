@@ -8,7 +8,7 @@ import { ModuleThreePageThreeComponent } from './module-three-page-three/module-
 
 
 import { ModuleThreePracticalComponent } from './module-three-practical/module-three-practical.component';
-import { Module2sidenavModule } from '../module2sidenav/module2sidenav.module';
+import { Module3sidenavModule } from '../module3sidenav/module3sidenav.module';
 import { MainNavbarModule } from 'src/app/main-navbar/main-navbar.module';
 import { Module3Component } from './module3.component';
 import { ModuleThreeConceptualComponent } from './module-three-conceptual/module-three-conceptual.component';
@@ -26,7 +26,7 @@ import { ModuleThreeConceptualComponent } from './module-three-conceptual/module
     CommonModule,
     Module3RoutingModule,
     MainNavbarModule,
-    Module2sidenavModule
+    Module3sidenavModule
   ]
 })
 export class Module3Module { }

@@ -49,7 +49,7 @@ export class ModuleOnePageOneComponent implements OnInit {
       
     }
     const user = JSON.parse(localStorage.getItem("token")!)
-    console.log(user.username)
+    // console.log(user.username)
     let newUser = await progressCourse(user.username, update)
     localStorage.setItem("token", JSON.stringify(newUser))
     this.router.navigate([reroutePage])

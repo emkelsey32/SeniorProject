@@ -19,7 +19,7 @@
         
           </div>
           <ng-template #elseBlock7>
-            <div class="progress-bar" role="progressbar" style="width: 100%; background-color: #0d6efd; " aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Start this Module!</div>
+            <div class="progress-bar" role="progressbar" style="width: 100%; background-color: #0d6efd; color: white " aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Start this Module!</div>
         
           </ng-template>
           
@@ -60,7 +60,7 @@
           </div>
           
           <ng-template #elseBlock7>
-            <div class="progress-bar" role="progressbar" style="width: 100%; background-color: #0d6efd; " aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Start this Module!</div>
+            <div class="progress-bar" role="progressbar" style="width: 100%; background-color: #0d6efd; color: white; border-radius: 10px; " aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">Start this Module!</div>
         
           </ng-template>
           <p class="card-text">Learn more advanced HTML techniques here!</p>
@@ -119,14 +119,14 @@
 </ng-template>
 <div *ngIf="mod4Open == true; else elseBlock3">
   <div class="col mb-4">
-    <div class="card h-100">
+    <div class="card h-100" (click)="startModule4()">
       <img src="./assets/Github.png" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Module 4 - Git Basics</h5>
         <div *ngIf="mod4Number > 0; else elseBlock7">
 
         <div class="progress">
-          <div class="progress-bar" role="progressbar" [ngStyle]="{'width': mod4Progress}" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{mod4Progress}}}}</div>
+          <div class="progress-bar" role="progressbar" [ngStyle]="{'width': mod4Progress}" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{mod4Progress}}</div>
         </div>
         </div>
         <ng-template #elseBlock7>
@@ -156,12 +156,13 @@
 
 <div *ngIf="mod5Open == true; else elseBlock2">
   <div class="col mb-4">
-    <div class="card h-100">
+    <div class="card h-100" (click)="startModule5()">
       <img src="./assets/AngularVSReact.png" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Module 5 - Frameworks</h5>
+        <div *ngIf="mod5Number > 0; else elseBlock7">
+
         <div class="progress">
-          <div *ngIf="mod5Number > 0; else elseBlock7">
 
           <div class="progress-bar" role="progressbar" [ngStyle]="{'width': mod5Progress}" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{mod5Progress}}</div>
         </div>
