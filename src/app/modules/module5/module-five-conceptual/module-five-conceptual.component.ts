@@ -56,6 +56,8 @@ export class ModuleFiveConceptualComponent implements OnInit {
         ]}
       console.log(update)
       let newUser = await progressCourse(user.username, update)
+      newUser = await progressCourse(user.username, {complete: true})
+
     localStorage.setItem("token", JSON.stringify(newUser))
     }
     this.router.navigate([reroutePage])
