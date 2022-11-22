@@ -11,34 +11,29 @@
         <div class="col-sm-10">
         <div style="paddingTop: 8vh; paddingLeft: 5%;"> 
             <h2 style="font-size: 3vh;  margin-bottom: 2%;">
-                All About Tags!
+                Clone and Add
             </h2>
             <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
-                Tags are the basic building blocks of HTML and let us specify a lot of things about what that building block is supposed to do or contain. For example, we could use a paragraph tag to put regular text into. 
+                To get started with GitHub, you can navigate to github.com and create an account here. Then on the page with all of the projects, click on the green button labeled New. 
+            </p>
+            <img src="assets/git1.png" alt="First Git Image" style="paddingLeft: 3%; width: 55vw;">
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                Follow the steps to create a new repository such as selecting a name and a description for the project. After creating the new repository, copy the link in the blue box. Open up a terminal, using “cmd” and use cd commands to get to the directory where you want the project to be. Read about cd here:             <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd">
+                    https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd.
+                </a>
+            </p>
+            <img src="assets/git2.png" alt="Second Git Image" style="paddingLeft: 3%; width: 55vw;">
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                We recommend making a new folder for the repository with a name that will match the project. Once inside this folder in the terminal, run git clone [INSERT YOUR URL] .
             </p>
             <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
-                Also, the way that tags are formatted is by having the tags ID wrapped in “&lt;” “&gt;” characters. Going back to the paragraph tag example, you would type “&lt;p&gt;” to place an opening paragraph tag. 
+                This will connect the repository to this folder on your computer.  
             </p>
             <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
-                Another important thing about tags is that you have an opening and closing tag, similar to how you have opening and closing parentheses like this: “(” “)”. An opening tag simply has the ID within the brackets like this: &lt;p&gt;, however the closing tag has a forward slash in the first angle bracket like this &lt;/p&gt;. A full set of opening and closing tags for a paragraph tag should look like this: &lt;p&gt; &lt;/p&gt;. 
+                Next, you need to create files, (maybe an HTML and CSS file) and add code to them. When you are ready to send your changes to the repository. Open up the terminal, cd in to the directory, and run “git add .” 
             </p>
             <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
-                These tags just help us define what should be held within the tags, just like how with parentheses the actual content is held within them. Similarly, with tags you just put the content that you would want in them between the tags. For example, you could write &lt;p&gt; I love HTML! &lt;/p&gt; and the text “I love HTML	!” would be displayed on the web page. 
-            </p>
-            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
-                Building off of this, you can even have the opening and closing tags be on separate lines and nothing would necessarily change. For example, if you were to type 
-            </p>
-            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">    
-                “&lt;p&gt;
-            <br>
-            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
-	            I love HTML!
-            <br>
-            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
-                &lt;/p&gt;”
-            </p>
-            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
-                the results would still be the same as if you wrote everything in one line, your code is just more readable, which is an important thing to consider.
+                This command will add all of your files to the staging section of git, labeling them as files that are ready to be added to a commit, which we will talk about in the next lesson.
             </p>
             <button (click)="updatePage(1,1, '/m4/module-4.3')"  style="marginLeft: 2%; ">Move to Next Lesson!</button>
             <div style="paddingBottom: 5%"> </div>

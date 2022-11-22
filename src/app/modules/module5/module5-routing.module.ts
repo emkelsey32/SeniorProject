@@ -4,15 +4,11 @@ import { ModuleFiveConceptualComponent } from './module-five-conceptual/module-f
 import { ModuleFivePageOneComponent } from './module-five-page-one/module-five-page-one.component';
 import { ModuleFivePageThreeComponent } from './module-five-page-three/module-five-page-three.component';
 import { ModuleFivePageTwoComponent } from './module-five-page-two/module-five-page-two.component';
-import { ModuleFivePageFourComponent } from './module-five-page-four/module-five-page-four.component';
-import { ModuleFivePageFiveComponent } from './module-five-page-five/module-five-page-five.component';
-
-import { ModuleFivePracticalComponent } from './module-five-practical/module-five-practical.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: ModuleFivePracticalComponent
+    component: ModuleFivePageOneComponent
   },
   {
     path: 'module-5.1',
@@ -25,18 +21,6 @@ const routes: Routes = [
   {
     path: 'module-5.3',
     component: ModuleFivePageThreeComponent
-  },
-  {
-    path: 'module-5.4',
-    component: ModuleFivePageFourComponent
-  },
-  {
-    path: 'module-5.5',
-    component: ModuleFivePageFiveComponent
-  },
-  {
-    path: 'module-5.practical',
-    component: ModuleFivePracticalComponent
   },
   {
     path: 'module-5.conceptual',
