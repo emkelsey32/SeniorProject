@@ -11,35 +11,23 @@
         <div class="col-sm-10">
         <div style="paddingTop: 8vh; paddingLeft: 5%;"> 
             <h2 style="font-size: 3vh;  margin-bottom: 2%;">
-                All About Tags!
+                Commit and Push
             </h2>
             <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
-                Tags are the basic building blocks of HTML and let us specify a lot of things about what that building block is supposed to do or contain. For example, we could use a paragraph tag to put regular text into. 
+                After you have added code using the git command, it it time to commit these changes. Commit takes the changes that you staged and adds them to a permanent snapshot of your code files at the time of the commit. This will associate all of these changes with a unique identifier. To commit files run git commit -m [INSERT MESSAGE]. The message you insert should be a brief description of what was changed, no more than a few words.
+            </p>
+            <img src="assets/git3.png" alt="Third git Image" style="paddingLeft: 3%; width: 55vw;">
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                Now that you have committed your files, it is time to push them to the repository itself. Up until this point, all of your changes have remained just on your local machine. But in order for you to successfully collaborate and publish your changes, the push command needs to be run. Run this command by typing “git push”.
             </p>
             <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
-                Also, the way that tags are formatted is by having the tags ID wrapped in “&lt;” “&gt;” characters. Going back to the paragraph tag example, you would type “&lt;p&gt;” to place an opening paragraph tag. 
+                Once this is done, you can return back to the github repository online and see your changes. As you can see, in my repository, a folder titled “Practice” was added, along with a README.md file. 
             </p>
-            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
-                Another important thing about tags is that you have an opening and closing tag, similar to how you have opening and closing parentheses like this: “(” “)”. An opening tag simply has the ID within the brackets like this: &lt;p&gt;, however the closing tag has a forward slash in the first angle bracket like this &lt;/p&gt;. A full set of opening and closing tags for a paragraph tag should look like this: &lt;p&gt; &lt;/p&gt;. 
-            </p>
-            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
-                These tags just help us define what should be held within the tags, just like how with parentheses the actual content is held within them. Similarly, with tags you just put the content that you would want in them between the tags. For example, you could write &lt;p&gt; I love HTML! &lt;/p&gt; and the text “I love HTML	!” would be displayed on the web page. 
-            </p>
-            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
-                Building off of this, you can even have the opening and closing tags be on separate lines and nothing would necessarily change. For example, if you were to type 
-            </p>
-            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">    
-                “&lt;p&gt;
+            <img src="assets/git4.png" alt="Fourth git Image" style="paddingLeft: 3%; width: 55vw;">
             <br>
-            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
-	            I love HTML!
             <br>
-            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
-                &lt;/p&gt;”
-            </p>
-            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
-                the results would still be the same as if you wrote everything in one line, your code is just more readable, which is an important thing to consider.
-            </p>
+            <br>
+            <br>
             <button (click)="updatePage(1,1, '/m4/module-4.4')"  style="marginLeft: 2%; ">Move to Next Lesson!</button>
             <div style="paddingBottom: 5%"> </div>
         </div>

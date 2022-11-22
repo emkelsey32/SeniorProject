@@ -5,11 +5,6 @@ import { Module5RoutingModule } from './module5-routing.module';
 import { ModuleFivePageOneComponent } from './module-five-page-one/module-five-page-one.component';
 import { ModuleFivePageTwoComponent } from './module-five-page-two/module-five-page-two.component';
 import { ModuleFivePageThreeComponent } from './module-five-page-three/module-five-page-three.component';
-import { ModuleFivePageFourComponent } from './module-five-page-four/module-five-page-four.component';
-import { ModuleFivePageFiveComponent } from './module-five-page-five/module-five-page-five.component';
-
-
-import { ModuleFivePracticalComponent } from './module-five-practical/module-five-practical.component';
 import { Module5sidenavModule } from '../module5sidenav/module5sidenav.module';
 import { MainNavbarModule } from 'src/app/main-navbar/main-navbar.module';
 import { Module5Component } from './module5.component';
@@ -19,9 +14,6 @@ import { ModuleFiveConceptualComponent } from './module-five-conceptual/module-f
   declarations: [
     ModuleFivePageTwoComponent,
     ModuleFivePageOneComponent,
-    ModuleFivePageFourComponent,
-    ModuleFivePageFiveComponent,
-    ModuleFivePracticalComponent,
     Module5Component,
     ModuleFiveConceptualComponent,
     ModuleFivePageThreeComponent
