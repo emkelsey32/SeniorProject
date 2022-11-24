@@ -53,7 +53,8 @@ const UserSchema = mongoose.Schema({
             }
         }                          
     }],
-    complete: { type: Boolean}
+    complete: { type: Boolean},
+    github: {type: String}
 
 });
 export default UserSchema;
