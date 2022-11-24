@@ -12,7 +12,7 @@
         <div class="col-sm-10">
         <div style="paddingTop: 8vh; paddingLeft: 5%;"> 
             <h2 style="font-size: 4vh;  margin-bottom: 2%; ">
-                Module 3 Practical Assignment
+                Module 4 Practical Assignment
             </h2>
             <h4 style="font-size: 2vh;  margin-bottom: 2%; ">
                 <div style="margin-bottom: 1%;">
@@ -35,6 +35,21 @@
                     Create two branches with one called 'Main' and one with your name. For Example, if my name was Chris the branch would be called 'Chris'           
                 </li>
                 </div>
+
+                <br>
+                <form [formGroup]="registerForm" (ngSubmit)="addGitHubAccount()">
+                    <div class="form-group">
+                      <label for="firstName">Insert the URL to your GitHub Account Here!</label>
+                      <input type="text" formControlName="github" class="form-control" style="width: 200px" [ngClass]="{ 'is-invalid': submitted && f['github'].errors }" />
+                      <div *ngIf="submitted && f['github'].errors" class="invalid-feedback">
+                          <div *ngIf="f['github'].errors['required']">GitHub Link is required</div>
+                      </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Add GitHub Link</button>
+                  <div class="alert alert-success" style="width:250px" *ngIf="submitted && !githubAdded">
+                    GitHub account linked!<br />
+                  </div>
+                </form>
             </h4>
             <button (click)="updatePage(1,1, '/landing-page')"  style="marginLeft: 2%; ">Move to Next Lesson!</button>
         </div>

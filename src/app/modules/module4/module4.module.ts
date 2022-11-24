@@ -14,6 +14,7 @@ import { Module4sidenavModule } from '../module4sidenav/module4sidenav.module';
 import { MainNavbarModule } from 'src/app/main-navbar/main-navbar.module';
 import { Module4Component } from './module4.component';
 import { ModuleFourConceptualComponent } from './module-four-conceptual/module-four-conceptual.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,9 @@ import { ModuleFourConceptualComponent } from './module-four-conceptual/module-f
     CommonModule,
     Module4RoutingModule,
     MainNavbarModule,
-    Module4sidenavModule
+    Module4sidenavModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class Module4Module { }
