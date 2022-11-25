@@ -1,44 +1,44 @@
-<ul class="nav flex-column" style="paddingTop: 8vh; paddingLeft: 5vh; position: fixed; height: 100vh; color: white;background-color: #1976d2;">
+<ul class="nav flex-column" style="paddingTop: 8vh; paddingLeft: 5vh; height: 100vh; color: white;background-color: #1976d2;">
             
     <!-- <div *ngIf="firstPage == 1; else elseBlock"> -->
     <div *ngIf="firstPage == 1; else elseBlock">
         <li class="nav-item">
-            <a class="nav-link backgroundColorLink" href="m2/module-2.1" >Buttons Galore!</a>
+            <a class="btn btn-primary" href="m2/module-2.1" >Buttons Galore!</a>
         </li>
     </div>
     <ng-template #elseBlock>
         <li class="nav-item">
-            <a class="nav-link backgroundColorDisabled disabled" href="" >Buttons Galore!</a>
+            <a class="btn btn-primary disabled" href="m2/module-2.1" >Buttons Galore!</a>
         </li>
     </ng-template>
     <div *ngIf="secondPage == 1; else elseBlock2">
         <li class="nav-item">
-            <a class="nav-link backgroundColorLink" href="m2/module-2.2" >Libraries</a>
+            <a class="btn btn-primary" href="m2/module-2.2" >Libraries</a>
         </li>
     </div>
     <ng-template #elseBlock2>
         <li class="nav-item">
-            <a class="nav-link backgroundColorDisabled disabled" href="" >Libraries</a>
+            <a class="btn btn-primary disabled" href="m2/module-2.2" >Libraries</a>
         </li>
     </ng-template>
     <div *ngIf="thirdPage == 1; else elseBlock3">
         <li class="nav-item">
-            <a class="nav-link backgroundColorLink" href="m2/module-2.conceptual" >Conceptual Check</a>
+            <a class="btn btn-primary" href="m2/module-2.conceptual" >Conceptual Check</a>
         </li>
     </div>
     <ng-template #elseBlock3>
         <li class="nav-item">
-            <a class="nav-link backgroundColorDisabled disabled" href="" >Conceptual Check</a>
+            <a class="btn btn-primary disabled" href="m2/module-2.conceptual" >Conceptual Check</a>
         </li>
     </ng-template>
     <div *ngIf="fourthPage == 1; else elseBlock4">
         <li class="nav-item">
-            <a class="nav-link backgroundColorLink" href="m2/module-2.practical" >Practical Assignment</a>
+            <a class="btn btn-primary" href="m2/module-2.practical" >Practical Assignment</a>
         </li>
     </div>
     <ng-template #elseBlock4>
         <li class="nav-item">
-            <a class="nav-link backgroundColorDisabled disabled" href="" >Practical Assignment</a>
+            <a class="btn btn-primary disabled" href="m2/module-2.practical" >Practical Assignment</a>
         </li>
     </ng-template>
 </ul>

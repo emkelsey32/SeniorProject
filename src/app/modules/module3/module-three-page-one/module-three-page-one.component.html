@@ -14,7 +14,22 @@
                 What is CSS?
             </h2>
             <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
-                CSS stands for Cascading Style Sheets, and is the code that allows us to apply styles to an HTML element. Remember all those times you wrote styles=”” in the previous modules? That was actually CSS! There are two main ways to use CSS that we’ll be covering in this course: inline CSS and external CSS. Inline CSS is the method that you’ve been using so far, where you write the CSS within the same line as your HTML hence the name inline CSS. External CSS relies on a separate CSS file that contains all the different styles that you would like to apply to a given HTML element. The neat thing about external CSS is that you can define a whole bunch of changes to the style under one name, and then just call that name in the HTML file to have every change applied. 
+                CSS stands for Cascading Style Sheets, and is the code that allows us to apply styles to an HTML element. Remember all those times you wrote styles=”” in the previous modules? That was actually CSS! 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                There are two main ways to use CSS that we’ll be covering in this course: 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 7%; margin-right: 20%">
+                <b>-inline CSS</b>
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 7%; margin-right: 20%">
+                <b>-external CSS</b>
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                Inline CSS is the method that you’ve been using so far, where you write the CSS within the same line as your HTML hence the name inline CSS. 
+                External CSS relies on a separate CSS file that contains all the different styles that you would like to apply to a given HTML element. 
+                The neat thing about external CSS is that you can define a whole bunch of changes to the style under one name, 
+                and then just call that name in the HTML file to have every change applied. 
             </p>
             <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
                 At this point, you’ve gotten plenty of experience with inline CSS, so we’re going to focus on external CSS. How do you actually write CSS in this way though, you may be asking. It is actually quite simple, you just need to follow this convention: 
@@ -82,7 +97,7 @@
             <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
                 It is also important to know that using inline CSS will override the external CSS used, so you should be careful when trying to mix the two together!
             </p>
-            <button (click)="updatePage(1,1, '/m3/module-3.2')"  style="marginLeft: 2%; ">Move to Next Lesson!</button>
+            <button (click)="updatePage(1,1, '/m3/module-3.2')" class="btn btn-primary" style="marginLeft: 2%; ">Move to Next Lesson!</button>
             <div style="paddingBottom: 5%"> </div>
         </div>
     </div>
