@@ -1,0 +1,42 @@
+<div>
+    <app-main-navbar></app-main-navbar>
+</div>
+<div class="vstack gap-5">
+        <div class="row">
+          <div class="col-sm-2">
+            <app-module4sidenav></app-module4sidenav>
+          </div>
+        
+        <!-- THIS IS WHERE COURSE CONTENT WILL GO -->
+        <div class="col-sm-10">
+        <div style="paddingTop: 8vh; paddingLeft: 5%;"> 
+            <h2 style="font-size: 3vh;  margin-bottom: 2%;">
+                Clone and Add
+            </h2>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                To get started with GitHub, you can navigate to github.com and create an account here. Then on the page with all of the projects, click on the green button labeled New. 
+            </p>
+            <img src="assets/git1.png" alt="First Git Image" style="paddingLeft: 3%; width: 55vw;">
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                Follow the steps to create a new repository such as selecting a name and a description for the project. After creating the new repository, copy the link in the blue box. Open up a terminal, using “cmd” and use cd commands to get to the directory where you want the project to be. Read about cd here:             <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd">
+                    https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/cd.
+                </a>
+            </p>
+            <img src="assets/git2.png" alt="Second Git Image" style="paddingLeft: 3%; width: 55vw;">
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                We recommend making a new folder for the repository with a name that will match the project. Once inside this folder in the terminal, run git clone [INSERT YOUR URL] .
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                This will connect the repository to this folder on your computer.  
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                Next, you need to create files, (maybe an HTML and CSS file) and add code to them. When you are ready to send your changes to the repository. Open up the terminal, cd in to the directory, and run “git add .” 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                This command will add all of your files to the staging section of git, labeling them as files that are ready to be added to a commit, which we will talk about in the next lesson.
+            </p>
+            <button (click)="updatePage(1,1, '/m4/module-4.3')"  style="marginLeft: 2%; ">Move to Next Lesson!</button>
+            <div style="paddingBottom: 5%"> </div>
+        </div>
+    </div>
+    </div>

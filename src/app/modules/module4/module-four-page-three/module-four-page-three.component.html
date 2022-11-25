@@ -1,0 +1,35 @@
+<div>
+    <app-main-navbar></app-main-navbar>
+</div>
+<div class="vstack gap-5">
+        <div class="row">
+          <div class="col-sm-2">
+            <app-module4sidenav></app-module4sidenav>
+          </div>
+        
+        <!-- THIS IS WHERE COURSE CONTENT WILL GO -->
+        <div class="col-sm-10">
+        <div style="paddingTop: 8vh; paddingLeft: 5%;"> 
+            <h2 style="font-size: 3vh;  margin-bottom: 2%;">
+                Commit and Push
+            </h2>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                After you have added code using the git command, it it time to commit these changes. Commit takes the changes that you staged and adds them to a permanent snapshot of your code files at the time of the commit. This will associate all of these changes with a unique identifier. To commit files run git commit -m [INSERT MESSAGE]. The message you insert should be a brief description of what was changed, no more than a few words.
+            </p>
+            <img src="assets/git3.png" alt="Third git Image" style="paddingLeft: 3%; width: 55vw;">
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                Now that you have committed your files, it is time to push them to the repository itself. Up until this point, all of your changes have remained just on your local machine. But in order for you to successfully collaborate and publish your changes, the push command needs to be run. Run this command by typing “git push”.
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                Once this is done, you can return back to the github repository online and see your changes. As you can see, in my repository, a folder titled “Practice” was added, along with a README.md file. 
+            </p>
+            <img src="assets/git4.png" alt="Fourth git Image" style="paddingLeft: 3%; width: 55vw;">
+            <br>
+            <br>
+            <br>
+            <br>
+            <button (click)="updatePage(1,1, '/m4/module-4.4')"  style="marginLeft: 2%; ">Move to Next Lesson!</button>
+            <div style="paddingBottom: 5%"> </div>
+        </div>
+    </div>
+    </div>

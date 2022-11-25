@@ -20,7 +20,7 @@ event.get('/', async (req, res) => {
 // --- Create New event ---
 
 event.post('/create', async (req, res) => {
-    console.log(req.body);
+    // console.log(req.body);
     const event = new Event({
         title: req.body.title,
         description: req.body.description,

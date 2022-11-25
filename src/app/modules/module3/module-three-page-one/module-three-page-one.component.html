@@ -1,0 +1,89 @@
+<div>
+    <app-main-navbar></app-main-navbar>
+</div>
+<div class="vstack gap-5">
+        <div class="row">
+          <div class="col-sm-2">
+            <app-module3sidenav></app-module3sidenav>
+          </div>
+        
+        <!-- THIS IS WHERE COURSE CONTENT WILL GO -->
+        <div class="col-sm-10">
+        <div style="paddingTop: 8vh; paddingLeft: 5%;"> 
+            <h2 style="font-size: 3vh;  margin-bottom: 2%;">
+                What is CSS?
+            </h2>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                CSS stands for Cascading Style Sheets, and is the code that allows us to apply styles to an HTML element. Remember all those times you wrote styles=”” in the previous modules? That was actually CSS! There are two main ways to use CSS that we’ll be covering in this course: inline CSS and external CSS. Inline CSS is the method that you’ve been using so far, where you write the CSS within the same line as your HTML hence the name inline CSS. External CSS relies on a separate CSS file that contains all the different styles that you would like to apply to a given HTML element. The neat thing about external CSS is that you can define a whole bunch of changes to the style under one name, and then just call that name in the HTML file to have every change applied. 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                At this point, you’ve gotten plenty of experience with inline CSS, so we’re going to focus on external CSS. How do you actually write CSS in this way though, you may be asking. It is actually quite simple, you just need to follow this convention: 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
+	            selector &#123;
+            <br>
+            <p style="font-size: 2vh; paddingLeft: 6%; font-weight: bold">
+	            property: value;
+            <br>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
+                &#125;
+            <br>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                The selector is the name associated with the grouping of properties that are being set. The property here refers to something like the background color, or font size, it's the name of the thing we want to change. The value here is the actual data that is being used, if it were a color it might be ‘blue’ or if it were a number it could be ‘5%’. If there were multiple things being changed you would simply repeat the ‘property: value;’ pattern on a new line.
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                You can also set multiple selectors to have the same property and value by separating them with a comma followed by a new line. For example, you could set multiple selectors to have a property value of red with the following code:
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">    
+                Thing1,
+            <br>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
+	            Thing2,
+            <br>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
+                Thing3 &#123;
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 6%; font-weight: bold">
+                color: red;
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
+                &#125;
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                You can set an HTML element to have these stylings applied by using the ‘class’ attribute and typing each selector’s name between the quotations with each one separated by a space. One important thing to note about CSS is that different styles cascade. What this means is that if you have two different selectors that modify the same value, the one that is lower in your CSS file will be the one that is selected. For example, if your CSS file looked like this:
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
+	            foo &#123;
+            <br>
+            <p style="font-size: 2vh; paddingLeft: 6%; font-weight: bold">
+	            color: red;
+            <br>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
+	            &#125;
+            <br>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
+	            bar &#123;
+            <br>
+            <p style="font-size: 2vh; paddingLeft: 6%; font-weight: bold">
+	            color: blue;
+            <br>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
+	            &#125;
+            <br> 
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                And then you applied this to a div with the following line:
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">
+	            &lt;div class=”bar foo”&gt;What’s the right color? &lt;/div&gt;
+            <br>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                The color of the text would be blue, not because ‘bar’ came first, but because it is the lowest selector that modifies the same property. If the stylings were to be reversed as ‘foo bar’ the color of the text would still be blue.
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                It is also important to know that using inline CSS will override the external CSS used, so you should be careful when trying to mix the two together!
+            </p>
+            <button (click)="updatePage(1,1, '/m3/module-3.2')"  style="marginLeft: 2%; ">Move to Next Lesson!</button>
+            <div style="paddingBottom: 5%"> </div>
+        </div>
+    </div>
+    </div>

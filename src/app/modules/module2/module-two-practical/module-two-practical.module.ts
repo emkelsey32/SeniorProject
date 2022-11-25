@@ -14,4 +14,4 @@ import { MainNavbarModule } from 'src/app/main-navbar/main-navbar.module';
     MainNavbarModule
   ]
 })
-export class ModuleTwoConceptualModule { }
+export class ModuleTwoPracticalModule { }

@@ -1,0 +1,38 @@
+<div>
+    <app-main-navbar></app-main-navbar>
+</div>
+<div class="vstack gap-5">
+        <div class="row">
+          <div class="col-sm-2">
+            <app-module5sidenav></app-module5sidenav>
+          </div>
+        
+        <!-- THIS IS WHERE COURSE CONTENT WILL GO -->
+        <div class="col-sm-10">
+        <div style="paddingTop: 8vh; paddingLeft: 5%;"> 
+            <h2 style="font-size: 3vh;  margin-bottom: 2%;">
+                All About Frameworks!
+            </h2>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                In this module, we’ll be taking a brief look at frameworks: what they are and why you would want to use them. Additionally, by the end of this module you are going to install an IDE on your computer, along with a framework, so you can start working independently on your own projects after you finish this course! 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                A quick side note, and IDE stands for Integrated Development Environment, and is the same thing that you’ve been using to write code in your browser but you will be using a stand alone application to write your code once you complete this course. This will give you much more power and control in writing your code, especially once you start to write more advanced code. 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                In general, frameworks are a much more advanced concept than what we will be able to completely cover in this course so we’re not going to be going very in depth about all of the small details of frameworks.
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                The first question that you may have is ‘what is a framework?’ A framework is a shell that allows you to smoothly connect your CSS and HTML to a more advanced programming language, like typescript or javascript, and to create custom reusable components throughout your application. Not every framework can be used with every language either, there are some that are specific to javascript, just like there are some that are specific to typescript. Two frameworks that we’ll be focusing on throughout this module are React and Angular. 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                React is a javascript framework, and Angular is for typescript. We actually used Angular to create the course that you’re using right now. Choosing a framework also means you will be able to use certain libraries that are specific to that particular framework. Additionally, each framework will allow you to use different commands to automatically generate the files needed to create a specific component, and in some cases give you a shell of code to get you started. 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                There can also be a large difference in what files are going to contain. For example, if you started an Angular project there would be 4 files needed for every component: an html file, a css file, a typescript file, and a spec.ts file. Here, each language is being used in its own file and they all work together to make a component. However, if you were working with a React project there would actually be less files, as you would only be using a CSS file and .jsx file which would contain the HTML and the javascript code all in one file. Some people prefer one over the other, and that’s perfectly fine! You just need to find one that you like to work with and can understand so you can grow your web development skills and create great projects. 
+            </p>
+            <button (click)="updatePage(1,1, '/m5/module-5.2')"  style="marginLeft: 2%; ">Move to Next Lesson!</button>
+            <div style="paddingBottom: 5%"> </div>
+        </div>
+    </div>
+    </div>

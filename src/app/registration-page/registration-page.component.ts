@@ -11,6 +11,8 @@ export class RegistrationPageComponent implements OnInit {
   registerForm!: FormGroup;
   submitted = false;
   validForm = true;
+  validUserName = true;
+  validPassword = true;
   constructor(private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
@@ -27,8 +29,25 @@ export class RegistrationPageComponent implements OnInit {
   async registerAccount(): Promise<void> {
     this.submitted = true;
     this.validForm = true;
+    this.validUserName = true;
+    this.validPassword = true;
+
     let token;
     if (this.registerForm.invalid) {
+      return;
+    }
+    console.log(this.f['username'].value.length)
+    if(this.f['username'].value.length < 5){
+      this.validUserName = false;
+      if(this.f['password'].value.length< 5){
+        this.validPassword = false;
+        return;
+      }
+      return;
+    }
+
+    if(this.f['password'].value.length< 5){
+      this.validPassword = false;
       return;
     }
     let a = await createUser(this.f['firstName'].value, this.f['lastName'].value, this.f['username'].value, this.f['password'].value, this.f['email'].value)

@@ -1,0 +1,44 @@
+<ul class="nav flex-column" style="paddingTop: 8vh; paddingLeft: 5vh; position: fixed; height: 100vh; color: white;background-color: #1976d2;">
+            
+    <!-- <div *ngIf="firstPage == 1; else elseBlock"> -->
+    <div *ngIf="firstPage == 1; else elseBlock">
+        <li class="nav-item">
+            <a class="nav-link backgroundColorLink" href="m5/module-5.1" >All About Frameworks!</a>
+        </li>
+    </div>
+    <ng-template #elseBlock>
+        <li class="nav-item">
+            <a class="nav-link backgroundColorDisabled disabled" href="" >All About Frameworks!</a>
+        </li>
+    </ng-template>
+    <div *ngIf="secondPage == 1; else elseBlock2">
+        <li class="nav-item">
+            <a class="nav-link backgroundColorLink" href="m5/module-5.2" >Crazy Components</a>
+        </li>
+    </div>
+    <ng-template #elseBlock2>
+        <li class="nav-item">
+            <a class="nav-link backgroundColorDisabled disabled" href="" >Crazy Components</a>
+        </li>
+    </ng-template>
+    <div *ngIf="thirdPage == 1; else elseBlock3">
+        <li class="nav-item">
+            <a class="nav-link backgroundColorLink" href="m5/module-5.3" >SPA Day</a>
+        </li>
+    </div>
+    <ng-template #elseBlock3>
+        <li class="nav-item">
+            <a class="nav-link backgroundColorDisabled disabled" href="" >SPA Day</a>
+        </li>
+    </ng-template>
+    <div *ngIf="fourthPage == 1; else elseBlock4">
+        <li class="nav-item">
+            <a class="nav-link backgroundColorLink" href="m5/module-5.conceptual" >Conceptual Check</a>
+        </li>
+    </div>
+    <ng-template #elseBlock4>
+        <li class="nav-item">
+            <a class="nav-link backgroundColorDisabled disabled" href="" >Conceptual Check</a>
+        </li>
+    </ng-template>
+</ul>
