@@ -1,0 +1,35 @@
+<div>
+    <app-main-navbar></app-main-navbar>
+</div>
+<div class="vstack gap-5">
+        <div class="row">
+          <div class="col-sm-2">
+            <app-module4sidenav></app-module4sidenav>
+          </div>
+        
+        <!-- THIS IS WHERE COURSE CONTENT WILL GO -->
+        <div class="col-sm-10">
+        <div style="paddingTop: 8vh; paddingLeft: 5%;"> 
+            <h2 style="font-size: 3vh;  margin-bottom: 2%;">
+                Branches
+            </h2>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                Branches are an important tool for seamlessly collaborating on the same files in a project. When two people are working on the same branch, and push different changes, this can result in a merge conflict if the changes contradict each other. For example, say that Emily wanted to add a line of code that added two numbers. But Chris wanted to add that same line of code but instead subtract two numbers. Which version is correct?
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                By working in separate branches, this can be avoided for the time being during development. By working in separate branches, it allows all changes to be pushed to the repository and reviewed by other team members while also not impacting other team members who may also be working on that same file. 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                To create a branch and switch to it run: git checkout -b [name of branch]
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                If you want to review another team member’s code and see how their version is running, this can be done by running: git checkout [name of branch].
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                This will allow users to quickly run other versions of the same code, aiding in debugging and collaborative development.
+            </p>
+            <button (click)="updatePage(1,1, '/m4/module-4.5')"  style="marginLeft: 2%; ">Move to Next Lesson!</button>
+            <div style="paddingBottom: 5%"> </div>
+        </div>
+    </div>
+    </div>

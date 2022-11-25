@@ -1,0 +1,50 @@
+<div>
+    <app-main-navbar></app-main-navbar>
+</div>
+<div class="vstack gap-5">
+        <div class="row">
+          <div class="col-sm-2">
+            <app-module4sidenav></app-module4sidenav>
+          </div>
+        
+        <!-- THIS IS WHERE COURSE CONTENT WILL GO -->
+        <div class="col-sm-10">
+        <div style="paddingTop: 8vh; paddingLeft: 5%;"> 
+            <h2 style="font-size: 3vh;  margin-bottom: 2%;">
+                Merging
+            </h2>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                Let’s say that in your repository, there are two branches:
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">                    
+                -     One main branch
+            <br>
+            <p style="font-size: 2vh; paddingLeft: 3%; font-weight: bold">                    
+                -     Emily's branch
+            <br>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                Emily’s branch is her own personal branch where she has been making all of her changes. The main branch is where all approved code goes after testing is done. The main branch is associated with all ready to go and published changes of the code.
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                Emily’s code has been tested, and she is ready to combine her branch into the main branch. This can be done by opening a “Pull Request” on the GitHub website. 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                Navigate to your repository and select “Pull Request” from the menu of options listed. On this tab, click the green button titled, “New pull request”
+            </p>
+            <img src="assets/git5.png" alt="Fifth git Image" style="paddingLeft: 3%; width: 55vw;">           
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                Select what branch should be merged into the other. In Emily’s case the base branch is “main” and the compare branch is “Emily”.
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                After the two branches have been selected, click “Create Pull Request”. This will bring you to a page where all commits associated with this merge are visible. If there are any merge conflicts, these can also be resolved here. Once these are all resolved, you can click the “Merge pull request” button that is green in the middle of the page. This will merge Emily’s changes into the main branch. 
+            </p>
+            <img src="assets/git6.png" alt="Sixth git Image" style="paddingLeft: 3%; width: 55vw;">
+            <br>
+            <br>
+            <br>
+            <br>
+            <button (click)="updatePage(1,1, '/m4/module-4.conceptual')"  style="marginLeft: 2%; ">Move to Next Lesson!</button>
+            <div style="paddingBottom: 5%"> </div>
+        </div>
+    </div>
+    </div>

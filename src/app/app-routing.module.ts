@@ -46,6 +46,18 @@ const routes: Routes = [
   {
     path: 'm2', 
     loadChildren: () => import('./modules/module2/module2.module').then(m => m.Module2Module)
+  },
+  {
+    path: 'm3', 
+    loadChildren: () => import('./modules/module3/module3.module').then(m => m.Module3Module)
+  },
+  {
+    path: 'm4', 
+    loadChildren: () => import('./modules/module4/module4.module').then(m => m.Module4Module)
+  },
+  {
+    path: 'm5', 
+    loadChildren: () => import('./modules/module5/module5.module').then(m => m.Module5Module)
   }
 ];
 

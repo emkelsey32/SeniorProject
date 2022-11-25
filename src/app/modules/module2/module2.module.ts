@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { Module2RoutingModule } from './module2-routing.module';
 import { ModuleTwoPageOneComponent } from './module-two-page-one/module-two-page-one.component';
 import { ModuleTwoPageTwoComponent } from './module-two-page-two/module-two-page-two.component';
-import { ModuleTwoPageThreeComponent } from './module-two-page-three/module-two-page-three.component';
 
 
 import { ModuleTwoPracticalComponent } from './module-two-practical/module-two-practical.component';
@@ -16,12 +15,10 @@ import { ModuleTwoConceptualComponent } from './module-two-conceptual/module-two
 @NgModule({
   declarations: [
     ModuleTwoPageTwoComponent,
-    ModuleTwoPageTwoComponent,
     ModuleTwoPageOneComponent,
     ModuleTwoPracticalComponent,
     Module2Component,
     ModuleTwoConceptualComponent,
-    ModuleTwoPageThreeComponent
   ],
   imports: [
     CommonModule,

@@ -1,0 +1,35 @@
+<div>
+    <app-main-navbar></app-main-navbar>
+</div>
+<div class="vstack gap-5">
+        <div class="row">
+          <div class="col-sm-2">
+            <app-module3sidenav></app-module3sidenav>
+          </div>
+        
+        <!-- THIS IS WHERE COURSE CONTENT WILL GO -->
+        <div class="col-sm-10">
+        <div style="paddingTop: 8vh; paddingLeft: 5%;"> 
+            <h2 style="font-size: 3vh;  margin-bottom: 2%;">
+                Some Cool Extra CSS Topics!
+            </h2>
+            <p style="font-size: 2vh; paddingLeft: 3%; margin-right: 20%">
+                Next, we’re going to talk about some things that will be helpful for some more advanced uses of CSS, however we will not be going into extreme detail about these. Instead, we would like you to know what these are, and if you would like to learn more about them we encourage you to do some research online about these topics. First, we will start with the float property. This property allows you to move an element to the left or right of the containing element. This can be used to create layouts with multiple columns. This property has three values it can be set to: left, right, or none. With a float value of none, the object would appear on a different line than everything else. However, if you were trying to insert an image into text and have it wrap around floating to the right or left could be useful. Here is an example of this:
+            </p>
+
+            <img src="assets/float.png" alt="Float Example" style="paddingLeft: 3%; width: 50vw;">
+
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                Next we’re going to talk about positioning. What is positioning you might be wondering? It is a way to change the location of an element, which is different from spacing, and there are four main types that we’re going to talk about here: static, relative, absolute, and fixed. Static positioning is the default method, and just means that the element is positioned according to the natural flow of the document. Relative positioning allows you to move an element relative to its current location. Absolute positioning allows you to move an element to a specific location on the page. And finally, fixed positioning allows you to move an element to a specific location on the page and keep it in place even when the user scrolls the page.
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                The final topic that we’re going to cover for CSS basics is grid systems. Grid systems are a great way to create responsive layouts, and one such grid system known as Flexbox, is a new grid system that is even more versatile than previous ones. Flexbox was specifically designed for responsive layouts, and as such is more flexible than the standard CSS grid. Understanding both however is key to creating layouts that look good on all devices, as something you will have to consider when making a website is how it looks on the three main technologies that access the internet: computers, tablets, and mobile devices. A good resource to learn about these grid systems can be found at<a href="https://web.dev/learn/css/grid/"> https://web.dev/learn/css/grid/. </a> 
+            </p>
+            <p style="font-size: 2vh; paddingLeft: 3%;  margin-right: 20%">
+                We encourage you to do some research about the topics we've covered in this lecture and think you should try testing them out to see how they actually work when writing code!
+            </p>
+            <button (click)="updatePage(1,1, '/m3/module-3.conceptual')"  style="marginLeft: 2%; ">Move to Next Lesson!</button>
+            <div style="paddingBottom: 5%"> </div>
+        </div>
+    </div>
+    </div>

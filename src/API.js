@@ -24,7 +24,7 @@ async function request(url, body) {
         },
     );
     res = await res.json();
-    console.log(res)
+    // console.log(res)
     return res;
 }
 
@@ -46,11 +46,11 @@ export async function loginUser(username, password) {
         username: username,
         password: password
     });
-    console.log(res)
+    // console.log(res)
     if(res.token === undefined) {
         return false;
     }
-    console.log(res.token)
+    // console.log(res.token)
     return res.token    
     
 }
@@ -75,37 +75,37 @@ export async function getEvents() {
 }
 
 export async function progressCourse(user, progress){
-    console.log(progress)
-    console.log("fjdslkf")
+    // console.log(progress)
+    // console.log("fjdslkf")
     let res = await request('users/progressCourse',{
         username: user,
         updatedValue: progress
     });
 
-    console.log(res.user)
+    // console.log(res.user)
     return res.user
 }
 
 export async function resetPassword(user, updatedPass){
-    console.log("fjdslkf")
+    // console.log("fjdslkf")
     let res = await request('users/resetPassword',{
         username: user,
         updatedValue: updatedPass
     });
 
-    console.log(res.user)
+    // console.log(res.user)
     return res.user
 }
 
 export async function changeProfile(user, progress){
-    console.log(progress)
-    console.log("fjdslkf")
+    // console.log(progress)
+    // console.log("fjdslkf")
     let res = await request('users/updateInfo',{
         username: user,
         updatedValue: progress
     });
 
-    console.log(res.user)
+    // console.log(res.user)
     return res.user
 }
 
@@ -123,7 +123,7 @@ export async function createEvent(title, description, date, startTime, endTime, 
 }
 
 export async function attendEvent(token, eventID, password) {
-    console.log(token, eventID, password);
+    // console.log(token, eventID, password);
     return await request('events/attend', {
         token: token,               // type: String
         eventID: eventID,           // type: String
