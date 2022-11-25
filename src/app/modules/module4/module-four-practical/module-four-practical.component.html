@@ -39,19 +39,23 @@
                 <br>
                 <form [formGroup]="registerForm" (ngSubmit)="addGitHubAccount()">
                     <div class="form-group">
-                      <label for="firstName">Insert the URL to your GitHub Account Here!</label>
-                      <input type="text" formControlName="github" class="form-control" style="width: 200px" [ngClass]="{ 'is-invalid': submitted && f['github'].errors }" />
+                      <label for="firstName" style="padding-bottom: 10px">Insert the URL to your GitHub Account Here!</label>
+                      <input type="text" formControlName="github" class="form-control" style="width: 200px;" [ngClass]="{ 'is-invalid': submitted && f['github'].errors }" />
                       <div *ngIf="submitted && f['github'].errors" class="invalid-feedback">
                           <div *ngIf="f['github'].errors['required']">GitHub Link is required</div>
                       </div>
                   </div>
+                  <br />
                   <button type="submit" class="btn btn-primary">Add GitHub Link</button>
                   <div class="alert alert-success" style="width:250px" *ngIf="submitted && !githubAdded">
                     GitHub account linked!<br />
                   </div>
                 </form>
             </h4>
-            <button (click)="updatePage(1,1, '/landing-page')" class="btn btn-primary" style="marginLeft: 2%; ">Move to Next Lesson!</button>
+            <br />
+            <br />
+            <br />
+            <button (click)="updatePage(1,1, '/landing-page')" class="btn btn-primary">Move to Next Lesson!</button>
             <button class="btn btn-primary" (click)="updatePage(5,1, '/m5/module-5.1')"  style="marginLeft: 2%; ">Continue on to Module 5!</button>
         </div>
     </div>
