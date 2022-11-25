@@ -47,10 +47,9 @@ export class ModuleFivePageOneComponent implements OnInit {
             progress: [1,1,1,1,1]},
           module3:{
               progress: [1,1,1,1,1]},
-            module4:{
-                  progress: [1,1,1,1,1,1,1]
-              },
-            module5:{
+          module4:{
+              progress: [1,1,1,1,1,1,1]},
+          module5:{
               progress: [1,1,0,0,0,0,0]
             }}
         ]}

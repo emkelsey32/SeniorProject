@@ -77,7 +77,8 @@ user.post('/create', async (req, res) => {
         email: req.body.email,
         password: hash,
         progress: test,
-        complete: false
+        complete: false,
+        github: "To be added in Module 4!"
     });
     // console.log(user.progress)
     try {

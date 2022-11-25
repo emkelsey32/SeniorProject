@@ -12,7 +12,7 @@ export class ProfilePageComponent implements OnInit {
   userName = "";
   email = "";
   website = "";
-  githubUrl = "";
+  github = "";
   user = JSON.parse(localStorage.getItem("token")!);
 
   avatarSrc = "https://avatars.dicebear.com/api/bottts/:{{firstname}}.svg"
@@ -39,6 +39,7 @@ export class ProfilePageComponent implements OnInit {
     this.lastName = (this.user!.lastName)
     this.userName = (this.user!.username) 
     this.email = (this.user!.email) 
+    this.github = this.user!.github;
 
     //progress bar math
     let user = JSON.parse(localStorage.getItem("token")!)
