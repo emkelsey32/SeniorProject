@@ -15,7 +15,7 @@ export class ProfilePageComponent implements OnInit {
   github = "";
   user = JSON.parse(localStorage.getItem("token")!);
 
-  avatarSrc = "https://avatars.dicebear.com/api/bottts/:{{firstname}}.svg"
+  avatarSrc = "https://avatars.dicebear.com/api/bottts/:" + this.firstName + ".svg"
 
   //progress bars
   mod1Progress = "";
