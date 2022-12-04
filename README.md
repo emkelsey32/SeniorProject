@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.0.
 
+## How to Start The Project
+
+This is done in a 2 terminal process. In one terminal, run npm i and then run npm run start. This will start the frontend of the application. To start up the concurrent backend, run cd backend, npm i and npm run start in a second terminal to start this.
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
